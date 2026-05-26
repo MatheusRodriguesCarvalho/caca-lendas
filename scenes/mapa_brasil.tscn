@@ -1,0 +1,172 @@
+[gd_scene format=3 uid="uid://yndu081pi5we"]
+
+[ext_resource type="Texture2D" uid="uid://cdjotnp430hx" path="res://assets/images/brasil 1.png" id="1_xp5yl"]
+[ext_resource type="Script" uid="uid://ds8kl0i4m6mf7" path="res://data/regiao.gd" id="2_8dlry"]
+
+[node name="Mapa" type="Node2D" unique_id=1306813973]
+position = Vector2(624, 294)
+
+[node name="Brasil" type="Sprite2D" parent="." unique_id=348004469]
+position = Vector2(-50, 30)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("1_xp5yl")
+
+[node name="CentroOeste" type="Area2D" parent="Brasil" unique_id=1296212660 node_paths=PackedStringArray("collision", "polygon", "line")]
+position = Vector2(0.5050683, 16.16162)
+scale = Vector2(0.9999999, 0.9999999)
+script = ExtResource("2_8dlry")
+collision = NodePath("Collision")
+polygon = NodePath("Polygon")
+line = NodePath("Line")
+
+[node name="Collision" type="CollisionPolygon2D" parent="Brasil/CentroOeste" unique_id=110110972]
+position = Vector2(0, -1.5377998e-05)
+polygon = PackedVector2Array(-28.787888, -69.696976, -24.747482, -59.595963, -18.686874, -53.030304, 29.292923, -50, 27.27272, -38.383835, 27.27272, -27.777771, 35.85858, -24.747467, 38.888885, -28.282822, 41.91919, -24.242432, 52.020203, -24.242432, 60.101013, -27.27272, 60.606064, -25.757568, 60.101013, -21.717178, 59.595963, -20.707077, 60.101013, -17.171722, 61.616165, -15.15152, 61.111115, -11.1111145, 59.595963, -11.1111145, 58.08081, -12.6262665, 56.56566, -10.606064, 54.545456, -10.101013, 54.040405, -3.5353546, 52.020203, -3.030304, 50, 0, 52.525253, 4.0404053, 49.49495, 7.070709, 51.0101, 12.121216, 47.979797, 15.15152, 44.949493, 15.15152, 43.939392, 14.646469, 38.383835, 15.15152, 36.363632, 16.666672, 28.282822, 17.171722, 23.681326, 25.335667, 24.242416, 29.292938, 21.212112, 29.797989, 12.626251, 44.949493, 9.595947, 47.474747, 4.0404053, 51.515152, 0.50505066, 59.09091, -2.0202026, 57.07071, -5.5555573, 58.58586, -7.070709, 57.57576, -9.595963, 45.454544, -25.252533, 43.939392, -26.262634, 24.747482, -23.23233, 14.646469, -24.242432, 9.595963, -29.797989, 5.5555573, -29.292938, -1.0101013, -41.919197, -1.515152, -44.9495, -9.090912, -43.43435, -11.1111145, -46.969704, -20.707077, -40.909103, -30.808075, -42.9293, -35.85858, -41.414154, -39.898987, -53.03031, -41.91919, -54.040413, -58.08081, -31.818192, -59.09091)
+
+[node name="Polygon" type="Polygon2D" parent="Brasil/CentroOeste" unique_id=1547835719]
+color = Color(0.60043824, 0.33223718, 0, 1)
+
+[node name="Line" type="Line2D" parent="Brasil/CentroOeste" unique_id=720455835]
+closed = true
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+joint_mode = 2
+sharp_limit = 3.0
+antialiased = true
+
+[node name="Norte" type="Area2D" parent="Brasil" unique_id=918625876 node_paths=PackedStringArray("collision", "polygon", "line")]
+position = Vector2(-35.3535, -74.74747)
+scale = Vector2(0.9999995, 0.9999995)
+script = ExtResource("2_8dlry")
+collision = NodePath("Collision")
+polygon = NodePath("Polygon")
+line = NodePath("Line")
+
+[node name="Collision" type="CollisionPolygon2D" parent="Brasil/Norte" unique_id=2086835641]
+position = Vector2(-1.5258789e-05, -2.3126602e-05)
+polygon = PackedVector2Array(-12.121223, -73.73741, -17.67678, -67.6768, -28.787895, -65.15155, -30.808098, -61.616196, -33.33335, -64.14145, -44.949524, -65.6566, -40.90912, -60.606094, -38.888916, -52.52528, -34.343452, -51.010128, -38.383865, -48.484875, -47.474777, -40.909115, -56.56569, -39.393963, -61.616196, -42.424267, -61.616196, -45.95962, -64.6465, -48.989925, -72.22226, -45.45457, -80.80813, -45.95962, -83.33338, -44.94952, -83.33338, -40.404064, -78.787926, -38.383858, -83.33338, -36.363655, -86.839935, -33.351204, -81.81823, -26.262642, -79.79803, -20.707085, -84.34348, 0.50505066, -87.87884, -0.50505066, -97.4748, 3.5353546, -105.55562, 8.585861, -107.57582, 16.161621, -107.57582, 19.696983, -110.101074, 22.727287, -113.13138, 28.282845, -105.05057, 38.383858, -105.55562, 42.424263, -99.49501, 43.434364, -97.4748, 46.46467, -91.91924, 46.46467, -86.363686, 42.424263, -86.363686, 52.020226, -84.84853, 53.535378, -73.23236, 52.525276, -70.70711, 53.535378, -67.6768, 50.505074, -63.13135, 50.000023, -55.050537, 43.434364, -46.969727, 41.919212, -46.464676, 55.05053, -38.888916, 61.616188, -31.313148, 62.62629, -27.272743, 65.15154, -22.727287, 66.161644, -19.696983, 69.19196, -11.111122, 70.202065, -5.0505066, 60.101036, -7.070717, 55.05053, -5.5555573, 51.010124, -17.17173, 48.98992, -18.181831, 32.8283, 4.0404053, 31.8182, 7.070709, 21.212135, 11.1111145, 31.313148, 17.171722, 37.878807, 65.15155, 40.90911, 63.131348, 52.525276, 63.131348, 63.13134, 71.71721, 66.161644, 74.74751, 62.62629, 77.77782, 66.66671, 87.87883, 66.66671, 95.95964, 63.63639, 96.46469, 55.05053, 93.93944, 51.515175, 95.45459, 48.48487, 98.989944, 44.949516, 93.43439, 40.90911, 90.909134, 34.343452, 91.414185, 31.313148, 94.44449, 28.787895, 93.93944, 26.262642, 89.89903, 26.767693, 87.37378, 23.737389, 86.36368, 19.696983, 87.87883, 10.101013, 84.343475, 6.060608, 78.78792, 5.5555573, 86.86873, -1.0101013, 90.40408, -4.545456, 93.43439, -10.606064, 96.46469, -17.17173, 98.48489, -25.757591, 90.40408, -29.292946, 83.333374, -29.292946, 80.80812, -27.272743, 81.81822, -32.32325, 70.20206, -36.363655, 69.191956, -47.474773, 66.16165, -48.484875, 61.616196, -56.06064, 60.606094, -63.131348, 57.57579, -67.6768, 52.020233, -61.111145, 49.49498, -54.545483, 46.464676, -52.52528, 40.909103, -52.52528, 35.858597, -51.51518, 29.797989, -54.545483, 22.222229, -53.53538, 22.72728, -48.989925, 14.577937, -50.342415, 8.080811, -47.979824, 1.0101013, -43.93942, -5.0505066, -47.979824, -7.5757675, -55.050537, -6.565666, -61.111145, -4.545456, -64.6465, -9.0909195, -73.73741)
+
+[node name="Polygon" type="Polygon2D" parent="Brasil/Norte" unique_id=1205080856]
+color = Color(0.20241463, 0.48510844, 2.8878452e-07, 1)
+
+[node name="Line" type="Line2D" parent="Brasil/Norte" unique_id=575599430]
+closed = true
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+joint_mode = 2
+sharp_limit = 3.0
+antialiased = true
+
+[node name="Nordeste" type="Area2D" parent="Brasil" unique_id=1548750918 node_paths=PackedStringArray("collision", "polygon", "line")]
+position = Vector2(99.494965, -42.42426)
+scale = Vector2(0.99999964, 0.99999964)
+script = ExtResource("2_8dlry")
+collision = NodePath("Collision")
+polygon = NodePath("Polygon")
+line = NodePath("Line")
+
+[node name="Collision" type="CollisionPolygon2D" parent="Brasil/Nordeste" unique_id=1499326201]
+polygon = PackedVector2Array(-36.363647, -58.080833, -27.777786, -55.05053, -24.242432, -51.010124, -25.757584, -41.919212, -14.367298, -47.661507, -7.57576, -44.444466, -0.50505066, -43.434364, 10.101013, -42.424263, 19.696991, -36.363655, 26.262634, -29.292938, 33.333344, -24.747482, 41.414154, -23.737381, 44.949524, -22.222229, 47.979828, -6.5656586, 45.45456, 5.0505066, 37.878815, 15.15152, 31.818207, 18.686874, 26.7677, 24.242432, 23.737396, 31.31314, 18.181824, 36.8687, 16.161621, 34.848495, 13.131317, 42.424255, 13.131317, 50.000015, 13.131317, 60.10103, 10.606079, 66.6667, 10.606079, 72.22226, 6.565674, 75.757614, 3.5353394, 73.23236, 1.515152, 69.69701, 2.0202026, 65.656586, 6.565674, 60.10103, 6.565674, 58.585876, 4.5454407, 56.565674, 0, 54.54547, -3.030304, 54.54547, -4.545456, 52.020218, -7.57576, 50.000015, -9.595963, 50.505066, -16.666672, 45.95961, -21.212128, 46.46466, -21.717178, 42.929306, -25.252533, 42.424255, -33.838394, 47.979813, -37.37375, 49.494965, -37.8788, 47.474762, -37.37375, 43.434357, -38.8889, 41.414154, -39.39395, 37.8788, -38.8889, 36.8687, -38.38385, 32.828293, -38.8889, 31.31314, -38.38385, 22.72728, -40.909103, 19.191925, -39.39395, 16.161621, -35.858597, 12.6262665, -41.414154, 8.585861, -43.939407, 2.0202026, -43.434357, -1.0101013, -40.404053, -3.5353546, -40.909103, -6.060608, -44.94951, -5.5555573, -47.474762, -8.585861, -48.484863, -12.6262665, -46.96971, -22.222229, -50.505066, -26.262634, -56.060623, -26.767685, -47.979813, -33.33335, -44.444458, -36.868706, -38.38385, -49.494972)
+
+[node name="Polygon" type="Polygon2D" parent="Brasil/Nordeste" unique_id=794006673]
+color = Color(0.772808, 0, 0.09658655, 1)
+
+[node name="Line" type="Line2D" parent="Brasil/Nordeste" unique_id=1791321485]
+closed = true
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+joint_mode = 2
+sharp_limit = 3.0
+antialiased = true
+
+[node name="Sudeste" type="Area2D" parent="Brasil" unique_id=1007803949 node_paths=PackedStringArray("collision", "polygon", "line")]
+position = Vector2(63.636375, 45.45453)
+script = ExtResource("2_8dlry")
+collision = NodePath("Collision")
+polygon = NodePath("Polygon")
+line = NodePath("Line")
+
+[node name="Collision" type="CollisionPolygon2D" parent="Brasil/Sudeste" unique_id=1325565970]
+position = Vector2(1.9073486e-06, -6.198883e-06)
+polygon = PackedVector2Array(-15.15152, -14.141418, -12.121216, -17.171722, -13.636368, -22.222214, -10.606064, -25.252518, -13.131317, -29.292923, -11.1111145, -32.323227, -9.090912, -32.828278, -8.585861, -39.393936, -6.5656586, -39.898987, -5.0505066, -41.91919, -3.5353546, -40.404037, -2.0202026, -40.404037, -1.515152, -38.383835, 2.0202026, -39.898987, 10.606064, -45.454544, 14.141418, -44.949493, 14.646469, -41.41414, 19.191925, -41.91919, 26.262619, -37.373734, 28.282822, -37.878784, 31.313126, -35.85858, 32.828278, -33.33333, 35.85858, -33.33333, 40.404053, -31.313126, 42.424225, -29.292923, 42.424225, -27.777771, 37.878784, -22.222214, 37.373734, -18.181824, 39.39395, -14.646469, 42.424225, -12.121216, 41.414124, -6.060608, 40.90909, -2.0202026, 38.38385, 0, 38.38385, 2.0202026, 36.363632, 6.060608, 33.83838, 7.070709, 32.828278, 9.090912, 31.313126, 9.595963, 31.313126, 11.1111145, 30.303024, 13.131317, 30.808075, 16.161621, 30.303024, 17.171722, 27.27272, 17.676773, 23.737366, 20.202026, 23.232315, 23.232315, 17.332064, 23.48885, 11.616165, 23.737366, 11.616165, 22.222214, 10.606064, 21.717163, 8.080811, 23.232315, 6.5656586, 22.222214, 4.545456, 24.242416, 4.545456, 25.757568, 1.515152, 26.262619, -0.50505066, 27.777771, 0, 29.292923, -5.0505066, 28.282822, -6.5656586, 29.797974, -10.101013, 30.808075, -13.636368, 33.83838, -18.181824, 35.85858, -20.202026, 38.888885, -22.72728, 34.84848, -27.27272, 33.83838, -27.27272, 30.303024, -29.797974, 27.27272, -29.797974, 22.727264, -32.323227, 20.707077, -39.393936, 19.696976, -41.41414, 18.686874, -46.464645, 17.676773, -48.9899, 18.181824, -53.535355, 18.181824, -50.50505, 15.65657, -41.91919, 0.50505066, -38.888885, 0, -39.393936, -4.0404053, -34.84848, -12.121216, -26.76767, -12.6262665, -24.747467, -14.141418, -19.191925, -14.646469, -18.181824, -14.141418)
+
+[node name="Polygon" type="Polygon2D" parent="Brasil/Sudeste" unique_id=1413789872]
+color = Color(0.63970566, 0.4029995, 1, 1)
+
+[node name="Line" type="Line2D" parent="Brasil/Sudeste" unique_id=1163447596]
+closed = true
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+joint_mode = 2
+sharp_limit = 3.0
+antialiased = true
+
+[node name="Sul" type="Area2D" parent="Brasil" unique_id=1249899638 node_paths=PackedStringArray("collision", "polygon", "line")]
+position = Vector2(19.191933, 101.51514)
+scale = Vector2(0.9999998, 0.9999998)
+script = ExtResource("2_8dlry")
+collision = NodePath("Collision")
+polygon = NodePath("Polygon")
+line = NodePath("Line")
+
+[node name="Collision" type="CollisionPolygon2D" parent="Brasil/Sul" unique_id=1612126433]
+position = Vector2(-9.536743e-07, -4.053116e-06)
+polygon = PackedVector2Array(-9.090912, -37.8788, -4.545456, -37.8788, -2.0202026, -38.38385, 3.030304, -37.37375, 5.0505066, -36.363647, 12.121216, -35.353546, 14.646469, -33.333344, 14.646469, -28.787888, 17.171722, -25.757584, 17.171722, -22.222229, 21.717163, -21.212128, 24.242416, -17.171722, 22.222214, -17.171722, 20.707062, -15.15152, 21.717163, -14.141418, 20.202026, -8.585876, 20.707062, -1.0101013, 21.717163, 0.5050354, 20.202026, 3.030304, 20.202026, 5.555542, 18.5191, 8.003433, 16.161621, 9.090912, 12.6262665, 13.131317, 10.101013, 17.676758, 8.585861, 20.202026, 8.080811, 22.727264, 5.5555573, 26.76767, 1.0101013, 31.818176, -4.545456, 35.85858, -6.060608, 38.888885, -7.57576, 42.92929, -12.121216, 47.474762, -12.121216, 43.434357, -9.090912, 40.404053, -8.585861, 37.37375, -11.1111145, 38.888885, -14.646469, 33.83838, -26.767685, 25.252533, -28.787888, 26.262634, -30.80809, 23.23233, -35.353546, 19.69696, -38.8889, 20.707062, -38.38385, 18.181824, -35.353546, 15.656555, -32.323242, 11.1111145, -23.737381, 2.525238, -15.15152, -3.030304, -13.636368, -4.545471, -14.141418, -11.1111145, -18.686874, -16.161621, -16.666672, -21.212128, -18.181824, -26.262634, -14.646469, -33.838394)
+
+[node name="Polygon" type="Polygon2D" parent="Brasil/Sul" unique_id=1521734949]
+color = Color(0, 0.4179636, 0.722674, 1)
+
+[node name="Line" type="Line2D" parent="Brasil/Sul" unique_id=1432935682]
+closed = true
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+joint_mode = 2
+sharp_limit = 3.0
+antialiased = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1175008282]
+offset = Vector2(-45, 30)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1213500845]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=129814971]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=23446945]
+layout_mode = 0
+offset_right = 319.0
+offset_bottom = 541.0
+
+[node name="Prompt" type="ColorRect" parent="CanvasLayer/Control/VBoxContainer" unique_id=338619388]
+layout_mode = 2
+
+[node name="Historia" type="ColorRect" parent="CanvasLayer/Control/VBoxContainer" unique_id=525978771]
+layout_mode = 2
+
+[node name="Barra" type="ColorRect" parent="CanvasLayer/Control/VBoxContainer" unique_id=1863391236]
+layout_mode = 2
+color = Color(0.7539839, 0.75398386, 0.75398386, 1)
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer/Control/VBoxContainer" unique_id=318403719]
+layout_mode = 2
+text = "csacsacsa"
+placeholder_text = "csacsa"
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=1970709116]
+layout_mode = 2
+
+[connection signal="mouse_entered" from="Brasil/CentroOeste" to="Brasil/CentroOeste" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Brasil/CentroOeste" to="Brasil/CentroOeste" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Brasil/Norte" to="Brasil/Norte" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Brasil/Norte" to="Brasil/Norte" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Brasil/Nordeste" to="Brasil/Nordeste" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Brasil/Nordeste" to="Brasil/Nordeste" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Brasil/Sudeste" to="Brasil/Sudeste" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Brasil/Sudeste" to="Brasil/Sudeste" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Brasil/Sul" to="Brasil/Sul" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Brasil/Sul" to="Brasil/Sul" method="_on_mouse_exited"]

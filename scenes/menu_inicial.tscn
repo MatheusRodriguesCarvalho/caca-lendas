@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://2upyisx0wiih"]
+
+[ext_resource type="Script" uid="uid://dlu7frq6i25iv" path="res://data/menu_inicial.gd" id="1_eg8ak"]
+[ext_resource type="Texture2D" uid="uid://c7f884ml70km0" path="res://assets/Menu/rocinha.jpg" id="2_nn1uv"]
+[ext_resource type="Texture2D" uid="uid://s8kx4yfug2vl" path="res://assets/Menu/logo.png" id="3_twj80"]
+[ext_resource type="Script" uid="uid://c5wio02k1hu02" path="res://data/buttons.gd" id="4_nn1uv"]
+
+[node name="Node2D" type="Node2D" unique_id=1530029490]
+script = ExtResource("1_eg8ak")
+
+[node name="MenuPrincipal" type="MarginContainer" parent="." unique_id=807994711]
+offset_right = 1150.0
+offset_bottom = 640.0
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="TextureRect" type="TextureRect" parent="MenuPrincipal" unique_id=20661219]
+layout_mode = 2
+texture = ExtResource("2_nn1uv")
+
+[node name="Logo" type="Sprite2D" parent="." unique_id=1158035926]
+position = Vector2(150, 150)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_twj80")
+
+[node name="Bottons" type="VBoxContainer" parent="." unique_id=920819303]
+offset_left = 103.0
+offset_top = 225.0
+offset_right = 440.0
+offset_bottom = 496.0
+alignment = 1
+
+[node name="criar sessao" type="Button" parent="Bottons" unique_id=791091796]
+layout_mode = 2
+text = "criar sessão"
+script = ExtResource("4_nn1uv")
+
+[node name="entrar sessao" type="Button" parent="Bottons" unique_id=1836075544]
+layout_mode = 2
+text = "Entrar sessão"
+
+[node name="lista de amigos" type="Button" parent="Bottons" unique_id=488975944]
+layout_mode = 2
+text = "Lista de amigos"
+
+[node name="opcoes" type="Button" parent="Bottons" unique_id=1077229139]
+layout_mode = 2
+text = "Opções"
+
+[node name="sair" type="Button" parent="Bottons" unique_id=1351146810]
+layout_mode = 2
+text = "Sair"
+
+[connection signal="pressed" from="Bottons/criar sessao" to="." method="_on_criar_sessao_pressed"]
+[connection signal="pressed" from="Bottons/entrar sessao" to="." method="_on_entrar_sessao_pressed"]

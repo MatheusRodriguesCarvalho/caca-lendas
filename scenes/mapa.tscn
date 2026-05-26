@@ -1,0 +1,215 @@
+[gd_scene format=3 uid="uid://dng6cxfjjqoqf"]
+
+[ext_resource type="Texture2D" uid="uid://sl3bjr2ob6ee" path="res://assets/images/Mapa1.png" id="1_tfnl5"]
+[ext_resource type="Texture2D" uid="uid://dh2g25wn74y6k" path="res://assets/images/botaoRegiao.png" id="1_u1vf7"]
+[ext_resource type="Script" uid="uid://c8afa1mjxoqqi" path="res://scenes/RegionButtons.gd" id="2_atgyb"]
+[ext_resource type="Texture2D" uid="uid://cdjotnp430hx" path="res://assets/images/brasil 1.png" id="2_tfnl5"]
+[ext_resource type="Script" uid="uid://cq56lcupa6tyf" path="res://scenes/regionButton.gd" id="3_nrd35"]
+[ext_resource type="Texture2D" uid="uid://vlrxt406qyi0" path="res://assets/images/botaoRegiao_hover.png" id="4_k7lwh"]
+
+[node name="Mapa" type="Node" unique_id=1369454431]
+
+[node name="MapaBrasil" type="Node2D" parent="." unique_id=1140073922]
+
+[node name="Regiao" type="Area2D" parent="MapaBrasil" unique_id=1283090225]
+position = Vector2(360, 330)
+scale = Vector2(0.6, 0.6)
+
+[node name="Sprite2D" type="Sprite2D" parent="MapaBrasil/Regiao" unique_id=1781549058]
+position = Vector2(314.99994, -6.666626)
+texture = ExtResource("1_tfnl5")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapaBrasil/Regiao" unique_id=1584328531]
+position = Vector2(266.6667, -146.66666)
+polygon = PackedVector2Array(-361.66666, -266.66666, 105, -331.66666, 506.6667, -48.333344, 314.99994, 339.99997, 48.333313, 593.3334, -105, 164.99997, -408.3333, 16.666656)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=781474047]
+
+[node name="Control" type="Control" parent="UI" unique_id=1204207418]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/Control" unique_id=2036790743]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="MainLayout" type="HBoxContainer" parent="UI/Control/MarginContainer" unique_id=1228424282]
+layout_mode = 2
+
+[node name="PainelEsquerdo" type="VBoxContainer" parent="UI/Control/MarginContainer/MainLayout" unique_id=1782748308]
+layout_mode = 2
+
+[node name="Espaco2" type="Control" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo" unique_id=564646054]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BotoesRegiao" type="VBoxContainer" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo" unique_id=102582193]
+layout_mode = 2
+script = ExtResource("2_atgyb")
+
+[node name="Norte" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" unique_id=1746606250]
+custom_minimum_size = Vector2(140, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+texture_normal = ExtResource("1_u1vf7")
+texture_hover = ExtResource("4_k7lwh")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("3_nrd35")
+
+[node name="Nordeste" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" unique_id=830425869]
+custom_minimum_size = Vector2(140, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+texture_normal = ExtResource("1_u1vf7")
+texture_hover = ExtResource("4_k7lwh")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Centro Oeste" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" unique_id=1563900802]
+custom_minimum_size = Vector2(140, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+texture_normal = ExtResource("1_u1vf7")
+texture_hover = ExtResource("4_k7lwh")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Sudeste" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" unique_id=38290660]
+custom_minimum_size = Vector2(140, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+texture_normal = ExtResource("1_u1vf7")
+texture_hover = ExtResource("4_k7lwh")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Sul" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" unique_id=1816311337]
+custom_minimum_size = Vector2(140, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+texture_normal = ExtResource("1_u1vf7")
+texture_hover = ExtResource("4_k7lwh")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Espaco" type="Control" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo" unique_id=505528518]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ChatLayout" type="PanelContainer" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo" unique_id=108742958]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/ChatLayout" unique_id=1762413530]
+layout_mode = 2
+
+[node name="ChatHeader" type="HBoxContainer" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/ChatLayout/VBoxContainer" unique_id=456202023]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Titulo" type="Label" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/ChatLayout/VBoxContainer/ChatHeader" unique_id=561305741]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Chat"
+
+[node name="Toggle" type="Button" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/ChatLayout/VBoxContainer/ChatHeader" unique_id=1166470516]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "+/-"
+
+[node name="ChatContent" type="VBoxContainer" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/ChatLayout/VBoxContainer" unique_id=2037646257]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ChatHistory" type="RichTextLabel" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/ChatLayout/VBoxContainer/ChatContent" unique_id=453460238]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+bbcode_enabled = true
+text = "teste: teste
+teste: teste
+teste: teste
+teste: teste
+teste: teste
+teste: teste
+teste: teste
+teste: teste"
+fit_content = true
+
+[node name="InputArea" type="HBoxContainer" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/ChatLayout/VBoxContainer/ChatContent" unique_id=1740955716]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="Message" type="LineEdit" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/ChatLayout/VBoxContainer/ChatContent/InputArea" unique_id=1975200046]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SendMessage" type="Button" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/ChatLayout/VBoxContainer/ChatContent/InputArea" unique_id=821646797]
+layout_mode = 2
+size_flags_horizontal = 8
+text = ">>"
+
+[node name="EspacoCentral" type="Control" parent="UI/Control/MarginContainer/MainLayout" unique_id=1737412755]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Missoes" type="PanelContainer" parent="UI/Control/MarginContainer/MainLayout" unique_id=401246755]
+layout_mode = 2
+
+[node name="MissoesMargem" type="MarginContainer" parent="UI/Control/MarginContainer/MainLayout/Missoes" unique_id=734966485]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Informacoes" type="VBoxContainer" parent="UI/Control/MarginContainer/MainLayout/Missoes/MissoesMargem" unique_id=2075851483]
+layout_mode = 2
+
+[node name="Silhueta" type="TextureRect" parent="UI/Control/MarginContainer/MainLayout/Missoes/MissoesMargem/Informacoes" unique_id=1137188195]
+layout_mode = 2
+texture = ExtResource("2_tfnl5")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="MissaoLore" type="RichTextLabel" parent="UI/Control/MarginContainer/MainLayout/Missoes/MissoesMargem/Informacoes" unique_id=790631329]
+layout_mode = 2
+text = "                                                                
+teste
+testesteste
+testeste
+stestestestestes
+testes
+testesse
+"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Control" type="Control" parent="UI/Control/MarginContainer/MainLayout/Missoes/MissoesMargem/Informacoes" unique_id=1045293616]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Botao" type="HBoxContainer" parent="UI/Control/MarginContainer/MainLayout/Missoes/MissoesMargem/Informacoes" unique_id=1746336805]
+layout_mode = 2
+alignment = 2
+
+[node name="Confirmar" type="Button" parent="UI/Control/MarginContainer/MainLayout/Missoes/MissoesMargem/Informacoes/Botao" unique_id=2057391264]
+layout_mode = 2
+text = "Confirmar"
+
+[connection signal="mouse_entered" from="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao/Centro Oeste" to="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" method="_on_centro_oeste_mouse_entered"]
+[connection signal="mouse_exited" from="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao/Centro Oeste" to="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" method="_on_centro_oeste_mouse_exited"]

@@ -1,0 +1,40 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1, 1, 1, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
+},
+&"default_portrait": "idle",
+&"description": "Uma senhora de idade. Passa seus dias caminhando por Umburanas ou tricotando.",
+&"display_name": "Cleunice",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"chad": {
+"export_overrides": {
+"image": "\"res://assets/images/NPC_elf 2.png\""
+},
+"mirror": true,
+"offset": Vector2(0, -200),
+"scale": 0.5,
+"scene": ""
+},
+"idle": {
+"export_overrides": {
+"image": "\"res://assets/images/NPC_elf.png\""
+},
+"mirror": true,
+"offset": Vector2(0, -200),
+"scale": 0.5,
+"scene": ""
+}
+},
+&"scale": 1.0
+}
