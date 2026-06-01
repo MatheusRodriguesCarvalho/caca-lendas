@@ -1,27 +1,160 @@
 [gd_scene format=3 uid="uid://dng6cxfjjqoqf"]
 
-[ext_resource type="Texture2D" uid="uid://sl3bjr2ob6ee" path="res://assets/images/Mapa1.png" id="1_tfnl5"]
-[ext_resource type="Texture2D" uid="uid://dh2g25wn74y6k" path="res://assets/images/botaoRegiao.png" id="1_u1vf7"]
-[ext_resource type="Script" uid="uid://c8afa1mjxoqqi" path="res://scenes/RegionButtons.gd" id="2_atgyb"]
-[ext_resource type="Texture2D" uid="uid://cdjotnp430hx" path="res://assets/images/brasil 1.png" id="2_tfnl5"]
-[ext_resource type="Script" uid="uid://cq56lcupa6tyf" path="res://scenes/regionButton.gd" id="3_nrd35"]
-[ext_resource type="Texture2D" uid="uid://vlrxt406qyi0" path="res://assets/images/botaoRegiao_hover.png" id="4_k7lwh"]
+[ext_resource type="Script" uid="uid://bfrahpaixlefb" path="res://data/mapRoot.gd" id="1_atgyb"]
+[ext_resource type="Texture2D" uid="uid://cdjotnp430hx" path="res://assets/images/mapa/brasil 1.png" id="2_tfnl5"]
+[ext_resource type="Texture2D" uid="uid://bh37ckc7r3vf0" path="res://assets/images/botoes/BS_Mapa_Norte.png" id="2_xafpf"]
+[ext_resource type="Texture2D" uid="uid://bo7mjg82f8pe8" path="res://assets/images/botoes/BS_Mapa_Nordeste.png" id="3_37p3s"]
+[ext_resource type="Texture2D" uid="uid://vlrxt406qyi0" path="res://assets/images/botoes/botaoRegiao_hover.png" id="4_k7lwh"]
+[ext_resource type="Texture2D" uid="uid://xb8qld60muik" path="res://assets/images/botoes/BS_Mapa_Sudeste.png" id="4_klvsx"]
+[ext_resource type="Texture2D" uid="uid://bbeufol42vdbp" path="res://assets/images/botoes/BS_Mapa_Sul.png" id="5_8hego"]
+[ext_resource type="Texture2D" uid="uid://co0yjxq21l5rn" path="res://assets/images/botoes/BS_Mapa_Centro_Oeste.png" id="6_2o3hw"]
+[ext_resource type="Texture2D" uid="uid://63i38jsjpiwm" path="res://assets/images/botoes/B_Mapa.png" id="7_or18i"]
+[ext_resource type="Texture2D" uid="uid://ceipoc1e77wp0" path="res://assets/images/interface/Coluna_esquerda.png" id="8_8hego"]
+[ext_resource type="Texture2D" uid="uid://cvryvtr2bq2u4" path="res://assets/images/botoes/Botão_Norte.png" id="8_xafpf"]
+[ext_resource type="Texture2D" uid="uid://djiqmvdaabv2f" path="res://assets/images/interface/Backgound_Selecao_regiao_semColuna.png" id="9_2o3hw"]
+[ext_resource type="Texture2D" uid="uid://brogfuucshuct" path="res://assets/images/botoes/Botão_Norte_Selecionado.png" id="9_37p3s"]
+[ext_resource type="Script" uid="uid://xq68s8reevmc" path="res://data/chatSystem.gd" id="10_k3j34"]
+[ext_resource type="Texture2D" uid="uid://b7wn6gxysel2f" path="res://assets/images/botoes/Botão_Nordeste.png" id="10_klvsx"]
+[ext_resource type="Texture2D" uid="uid://cr32j6rrav6me" path="res://assets/images/botoes/Botão_Nordeste_Selecionado.png" id="11_8hego"]
+[ext_resource type="Texture2D" uid="uid://b8huwrucso2dr" path="res://assets/images/botoes/Botão_Centro Oeste.png" id="12_2o3hw"]
+[ext_resource type="Texture2D" uid="uid://d4de2vtnppy3y" path="res://assets/images/botoes/Botão_Centro Oeste_Selecionado.png" id="13_or18i"]
+[ext_resource type="Texture2D" uid="uid://twsq1n33o2jg" path="res://assets/images/botoes/Botão_Sudeste.png" id="14_qa4fu"]
+[ext_resource type="Texture2D" uid="uid://c0h08jho4g83w" path="res://assets/images/botoes/Botão_Sudeste_Selecionado.png" id="15_lse37"]
+[ext_resource type="Texture2D" uid="uid://bhkplxj7swxqm" path="res://assets/images/botoes/Botão_Sul.png" id="16_j36sj"]
+[ext_resource type="Texture2D" uid="uid://cuqcnqjxaarth" path="res://assets/images/botoes/Botão_Pronto.png" id="20_sbghg"]
+[ext_resource type="Texture2D" uid="uid://dlopm4uo7785u" path="res://assets/images/botoes/Botão_Pronto_Selecionado.png" id="21_8lbhi"]
+[ext_resource type="Texture2D" uid="uid://ma0amwlwwi4l" path="res://assets/images/interface/F_Imagem_Missao.png" id="21_or18i"]
+[ext_resource type="Texture2D" uid="uid://c4dusanwdom6x" path="res://assets/images/interface/F_Imagem_Missao - Copia.png" id="25_2o3hw"]
+[ext_resource type="Texture2D" uid="uid://c1vsgba5kl6c1" path="res://assets/images/interface/Coluna_esquerda - Copia.png" id="25_or18i"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qa4fu"]
+texture = ExtResource("9_2o3hw")
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+axis_stretch_horizontal = 1
+modulate_color = Color(0.3529412, 0.8509804, 1, 0.5294118)
+
+[sub_resource type="Theme" id="Theme_qa4fu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lse37"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j36sj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sbghg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8lbhi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fmmpp"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2o3hw"]
+load_path = "res://.godot/imported/F_Imagem_Missao - Copia.png-b0549393b48c60a805cbee5671e8b6bd.ctex"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_or18i"]
+bg_color = Color(0.88908345, 0.47642398, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 
 [node name="Mapa" type="Node" unique_id=1369454431]
+script = ExtResource("1_atgyb")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=319367972]
+
+[node name="Blue" type="Sprite2D" parent="Node2D" unique_id=1520742629]
+position = Vector2(576.3334, 324.37503)
+scale = Vector2(0.6011574, 0.6011574)
+texture = ExtResource("9_2o3hw")
+
+[node name="Orange" type="Sprite2D" parent="Node2D" unique_id=1273215775]
+position = Vector2(576.4445, 324.25)
+scale = Vector2(0.601389, 0.60138893)
+texture = ExtResource("8_8hego")
 
 [node name="MapaBrasil" type="Node2D" parent="." unique_id=1140073922]
 
-[node name="Regiao" type="Area2D" parent="MapaBrasil" unique_id=1283090225]
-position = Vector2(360, 330)
-scale = Vector2(0.6, 0.6)
+[node name="Norte" type="Area2D" parent="MapaBrasil" unique_id=1283090225]
+position = Vector2(-5.9604645e-08, 1.1920929e-07)
+scale = Vector2(0.4, 0.4)
 
-[node name="Sprite2D" type="Sprite2D" parent="MapaBrasil/Regiao" unique_id=1781549058]
-position = Vector2(314.99994, -6.666626)
-texture = ExtResource("1_tfnl5")
+[node name="Sprite2D" type="Sprite2D" parent="MapaBrasil/Norte" unique_id=1781549058]
+z_index = 3
+position = Vector2(1195.69, 818.025)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_xafpf")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapaBrasil/Regiao" unique_id=1584328531]
-position = Vector2(266.6667, -146.66666)
-polygon = PackedVector2Array(-361.66666, -266.66666, 105, -331.66666, 506.6667, -48.333344, 314.99994, 339.99997, 48.333313, 593.3334, -105, 164.99997, -408.3333, 16.666656)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapaBrasil/Norte" unique_id=1584328531]
+position = Vector2(1027.5, 407.50003)
+scale = Vector2(0.4, 0.4)
+polygon = PackedVector2Array(-937.50024, 256.24988, 481.24976, -475.00012, 675, 274.99988)
+
+[node name="Nordeste" type="Area2D" parent="MapaBrasil" unique_id=1752365306]
+position = Vector2(-5.9604645e-08, 1.1920929e-07)
+scale = Vector2(0.4, 0.4)
+
+[node name="Sprite2D" type="Sprite2D" parent="MapaBrasil/Nordeste" unique_id=1917086212]
+z_index = 3
+position = Vector2(1195.74, 818.31)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_37p3s")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapaBrasil/Nordeste" unique_id=1041411539]
+position = Vector2(1644.9999, 560.00006)
+scale = Vector2(0.4, 0.4)
+polygon = PackedVector2Array(-361.66666, -266.66666, 506.6667, -48.333344, 48.333313, 593.3334)
+
+[node name="Sudeste" type="Area2D" parent="MapaBrasil" unique_id=1207191049]
+position = Vector2(-5.9604645e-08, 1.1920929e-07)
+scale = Vector2(0.4, 0.4)
+
+[node name="Sprite2D" type="Sprite2D" parent="MapaBrasil/Sudeste" unique_id=1762064399]
+z_index = 3
+position = Vector2(1194.09, 817.21)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_klvsx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapaBrasil/Sudeste" unique_id=1996166323]
+position = Vector2(1490.6333, 971.1667)
+scale = Vector2(0.4, 0.4)
+polygon = PackedVector2Array(117.166504, -284.16675, 323.4165, 409.58325, -326.5835, 278.33325)
+
+[node name="Sul" type="Area2D" parent="MapaBrasil" unique_id=340934911]
+position = Vector2(-5.9604645e-08, 1.1920929e-07)
+scale = Vector2(0.4, 0.4)
+
+[node name="Sprite2D" type="Sprite2D" parent="MapaBrasil/Sul" unique_id=1567056138]
+z_index = 3
+position = Vector2(1197.805, 816.99)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("5_8hego")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapaBrasil/Sul" unique_id=651923838]
+position = Vector2(1247.5, 1257.5)
+scale = Vector2(0.4, 0.4)
+polygon = PackedVector2Array(262.5, -31.25, -57.916687, 580.8334, -39.083252, -177.91699)
+
+[node name="Centro" type="Area2D" parent="MapaBrasil" unique_id=810703849]
+position = Vector2(-5.9604645e-08, 1.1920929e-07)
+scale = Vector2(0.4, 0.4)
+
+[node name="Sprite2D" type="Sprite2D" parent="MapaBrasil/Centro" unique_id=362573158]
+z_index = 3
+position = Vector2(1193.325, 817.72)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("6_2o3hw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapaBrasil/Centro" unique_id=1275254840]
+position = Vector2(990.6333, 838.6667)
+scale = Vector2(0.4, 0.4)
+polygon = PackedVector2Array(773.41675, -377.91675, 485.91675, 697.08325, -7.833252, -71.66675)
+
+[node name="Mapa" type="Sprite2D" parent="MapaBrasil" unique_id=192298067]
+z_index = 2
+position = Vector2(478, 327)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_or18i")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=781474047]
 
@@ -57,51 +190,49 @@ size_flags_vertical = 3
 
 [node name="BotoesRegiao" type="VBoxContainer" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo" unique_id=102582193]
 layout_mode = 2
-script = ExtResource("2_atgyb")
 
-[node name="Norte" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" unique_id=1746606250]
+[node name="Norte" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" unique_id=1746606250 groups=["BotoesRegioes"]]
 custom_minimum_size = Vector2(140, 40)
 layout_mode = 2
 size_flags_horizontal = 0
-texture_normal = ExtResource("1_u1vf7")
-texture_hover = ExtResource("4_k7lwh")
-ignore_texture_size = true
-stretch_mode = 5
-script = ExtResource("3_nrd35")
-
-[node name="Nordeste" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" unique_id=830425869]
-custom_minimum_size = Vector2(140, 40)
-layout_mode = 2
-size_flags_horizontal = 0
-texture_normal = ExtResource("1_u1vf7")
-texture_hover = ExtResource("4_k7lwh")
+texture_normal = ExtResource("8_xafpf")
+texture_pressed = ExtResource("9_37p3s")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Centro Oeste" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" unique_id=1563900802]
+[node name="Nordeste" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" unique_id=830425869 groups=["BotoesRegioes"]]
 custom_minimum_size = Vector2(140, 40)
 layout_mode = 2
 size_flags_horizontal = 0
-texture_normal = ExtResource("1_u1vf7")
-texture_hover = ExtResource("4_k7lwh")
+texture_normal = ExtResource("10_klvsx")
+texture_pressed = ExtResource("11_8hego")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Sudeste" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" unique_id=38290660]
+[node name="Centro" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" unique_id=1563900802 groups=["BotoesRegioes"]]
 custom_minimum_size = Vector2(140, 40)
 layout_mode = 2
 size_flags_horizontal = 0
-texture_normal = ExtResource("1_u1vf7")
-texture_hover = ExtResource("4_k7lwh")
+texture_normal = ExtResource("12_2o3hw")
+texture_pressed = ExtResource("13_or18i")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Sul" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" unique_id=1816311337]
+[node name="Sudeste" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" unique_id=38290660 groups=["BotoesRegioes"]]
 custom_minimum_size = Vector2(140, 40)
 layout_mode = 2
 size_flags_horizontal = 0
-texture_normal = ExtResource("1_u1vf7")
-texture_hover = ExtResource("4_k7lwh")
+texture_normal = ExtResource("14_qa4fu")
+texture_pressed = ExtResource("15_lse37")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Sul" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" unique_id=1816311337 groups=["BotoesRegioes"]]
+custom_minimum_size = Vector2(140, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+texture_normal = ExtResource("16_j36sj")
+texture_pressed = ExtResource("4_k7lwh")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -112,6 +243,8 @@ size_flags_vertical = 3
 [node name="ChatLayout" type="PanelContainer" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo" unique_id=108742958]
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qa4fu")
+script = ExtResource("10_k3j34")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/ChatLayout" unique_id=1762413530]
 layout_mode = 2
@@ -133,11 +266,20 @@ text = "+/-"
 [node name="ChatContent" type="VBoxContainer" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/ChatLayout/VBoxContainer" unique_id=2037646257]
 layout_mode = 2
 size_flags_vertical = 3
+theme = SubResource("Theme_qa4fu")
 
 [node name="ChatHistory" type="RichTextLabel" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/ChatLayout/VBoxContainer/ChatContent" unique_id=453460238]
+custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
+theme_override_colors/selection_color = Color(0.101960786, 0.1764706, 1, 0.8)
+theme_override_colors/font_outline_color = Color(0.87058824, 0, 0, 1)
+theme_override_colors/table_border = Color(0, 0.5372549, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lse37")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_j36sj")
+theme_override_styles/background = SubResource("StyleBoxEmpty_sbghg")
+theme_override_styles/fill = SubResource("StyleBoxEmpty_8lbhi")
 bbcode_enabled = true
 text = "teste: teste
 teste: teste
@@ -147,7 +289,7 @@ teste: teste
 teste: teste
 teste: teste
 teste: teste"
-fit_content = true
+scroll_following = true
 
 [node name="InputArea" type="HBoxContainer" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/ChatLayout/VBoxContainer/ChatContent" unique_id=1740955716]
 layout_mode = 2
@@ -168,6 +310,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Missoes" type="PanelContainer" parent="UI/Control/MarginContainer/MainLayout" unique_id=401246755]
+visible = false
 layout_mode = 2
 
 [node name="MissoesMargem" type="MarginContainer" parent="UI/Control/MarginContainer/MainLayout/Missoes" unique_id=734966485]
@@ -180,24 +323,42 @@ theme_override_constants/margin_bottom = 10
 [node name="Informacoes" type="VBoxContainer" parent="UI/Control/MarginContainer/MainLayout/Missoes/MissoesMargem" unique_id=2075851483]
 layout_mode = 2
 
+[node name="TextureRect" type="TextureRect" parent="UI/Control/MarginContainer/MainLayout/Missoes/MissoesMargem/Informacoes" unique_id=1406626630]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("21_or18i")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="Silhueta" type="TextureRect" parent="UI/Control/MarginContainer/MainLayout/Missoes/MissoesMargem/Informacoes" unique_id=1137188195]
+custom_minimum_size = Vector2(250, 100)
 layout_mode = 2
 texture = ExtResource("2_tfnl5")
 expand_mode = 4
 stretch_mode = 5
 
 [node name="MissaoLore" type="RichTextLabel" parent="UI/Control/MarginContainer/MainLayout/Missoes/MissoesMargem/Informacoes" unique_id=790631329]
+custom_minimum_size = Vector2(200, 280)
 layout_mode = 2
+bbcode_enabled = true
 text = "                                                                
 teste
+
+
+
 testesteste
 testeste
+
+
+
+
+
+
 stestestestestes
 testes
 testesse
 "
-fit_content = true
-autowrap_mode = 0
+autowrap_mode = 2
 
 [node name="Control" type="Control" parent="UI/Control/MarginContainer/MainLayout/Missoes/MissoesMargem/Informacoes" unique_id=1045293616]
 layout_mode = 2
@@ -207,9 +368,127 @@ size_flags_vertical = 3
 layout_mode = 2
 alignment = 2
 
-[node name="Confirmar" type="Button" parent="UI/Control/MarginContainer/MainLayout/Missoes/MissoesMargem/Informacoes/Botao" unique_id=2057391264]
+[node name="TextureButton" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/Missoes/MissoesMargem/Informacoes/Botao" unique_id=1637280332]
+custom_minimum_size = Vector2(140, 40)
 layout_mode = 2
-text = "Confirmar"
+texture_normal = ExtResource("20_sbghg")
+texture_hover = ExtResource("21_8lbhi")
+ignore_texture_size = true
+stretch_mode = 5
 
-[connection signal="mouse_entered" from="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao/Centro Oeste" to="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" method="_on_centro_oeste_mouse_entered"]
-[connection signal="mouse_exited" from="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao/Centro Oeste" to="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" method="_on_centro_oeste_mouse_exited"]
+[node name="PainelDireito" type="PanelContainer" parent="UI/Control/MarginContainer/MainLayout" unique_id=2058231544]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_fmmpp")
+
+[node name="FundoMissao" type="TextureRect" parent="UI/Control/MarginContainer/MainLayout/PainelDireito" unique_id=803449369]
+custom_minimum_size = Vector2(300, 250)
+layout_mode = 2
+texture = ExtResource("25_or18i")
+expand_mode = 4
+stretch_mode = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/Control/MarginContainer/MainLayout/PainelDireito" unique_id=1067827002]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBox" type="VBoxContainer" parent="UI/Control/MarginContainer/MainLayout/PainelDireito/MarginContainer" unique_id=120489415]
+layout_mode = 2
+
+[node name="ModuraSilhueta" type="TextureRect" parent="UI/Control/MarginContainer/MainLayout/PainelDireito/MarginContainer/VBox" unique_id=2106997801]
+custom_minimum_size = Vector2(150, 200)
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_2o3hw")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Silhueta" type="TextureRect" parent="UI/Control/MarginContainer/MainLayout/PainelDireito/MarginContainer/VBox/ModuraSilhueta" unique_id=1926784476]
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tfnl5")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="Control2" type="Control" parent="UI/Control/MarginContainer/MainLayout/PainelDireito/MarginContainer/VBox" unique_id=1847161328]
+layout_mode = 2
+
+[node name="MolduraLore" type="TextureRect" parent="UI/Control/MarginContainer/MainLayout/PainelDireito/MarginContainer/VBox" unique_id=119928952]
+custom_minimum_size = Vector2(0, 350)
+layout_mode = 2
+texture = ExtResource("25_2o3hw")
+expand_mode = 4
+stretch_mode = 6
+
+[node name="Lore" type="RichTextLabel" parent="UI/Control/MarginContainer/MainLayout/PainelDireito/MarginContainer/VBox/MolduraLore" unique_id=1459108644]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_right = 100.0
+offset_bottom = 260.0
+grow_horizontal = 2
+bbcode_enabled = true
+text = "                                                                
+teste
+"
+tab_size = 1
+
+[node name="Control" type="Control" parent="UI/Control/MarginContainer/MainLayout/PainelDireito/MarginContainer/VBox" unique_id=964277280]
+layout_mode = 2
+
+[node name="Botao" type="HBoxContainer" parent="UI/Control/MarginContainer/MainLayout/PainelDireito/MarginContainer/VBox" unique_id=1792283589]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+alignment = 2
+
+[node name="TextureButton" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/PainelDireito/MarginContainer/VBox/Botao" unique_id=706596417]
+custom_minimum_size = Vector2(140, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("20_sbghg")
+texture_hover = ExtResource("21_8lbhi")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="PainelAviso" type="PanelContainer" parent="UI" unique_id=1050517765]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -209.0
+offset_top = -58.0
+offset_right = 209.0
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_or18i")
+
+[node name="Aviso" type="Label" parent="UI/PainelAviso" unique_id=952920825]
+custom_minimum_size = Vector2(350, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0.26666668, 1)
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/ChatLayout/VBoxContainer/ChatContent/InputArea/SendMessage" to="." method="_on_send_message_pressed"]

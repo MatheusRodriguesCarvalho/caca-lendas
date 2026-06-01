@@ -1,6 +1,51 @@
 [gd_scene format=3 uid="uid://ddmon84wldpj3"]
 
 [ext_resource type="Script" uid="uid://1pld6lots0h" path="res://data/sceneScript.gd" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://rprlupibunv3" path="res://scenes/managerPopup.gd" id="2_0wfyh"]
 
-[node name="main" type="Node2D" unique_id=1496020993]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5qli"]
+bg_color = Color(0.88908345, 0.47642398, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[node name="main" type="Node2D" unique_id=1496020993 node_paths=PackedStringArray("barra_timer")]
 script = ExtResource("1_o5qli")
+barra_timer = NodePath("CanvasLayer/ProgressBar")
+
+[node name="Timer" type="Timer" parent="." unique_id=269903593]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=596675406]
+layer = 10
+script = ExtResource("2_0wfyh")
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" unique_id=1123653914]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="PainelAviso" type="PanelContainer" parent="CanvasLayer" unique_id=925755801]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_bottom = 118.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_o5qli")
+
+[node name="Aviso" type="Label" parent="CanvasLayer/PainelAviso" unique_id=1185912038]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0.26666668, 1)
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

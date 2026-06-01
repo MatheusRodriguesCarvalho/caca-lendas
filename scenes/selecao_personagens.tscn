@@ -1,18 +1,58 @@
 [gd_scene format=3 uid="uid://dyw0m5yyuv6yh"]
 
-[ext_resource type="Texture2D" uid="uid://igk3arnxwm7e" path="res://assets/images/botao.png" id="1_fi10c"]
-[ext_resource type="Script" uid="uid://bjlr742gnlu2g" path="res://scenes/palco.gd" id="1_k7kwq"]
+[ext_resource type="Texture2D" uid="uid://djiqmvdaabv2f" path="res://assets/images/interface/Backgound_Selecao_regiao_semColuna.png" id="1_0fvxc"]
+[ext_resource type="Script" uid="uid://bjlr742gnlu2g" path="res://data/palco.gd" id="1_wu6gt"]
+[ext_resource type="Texture2D" uid="uid://ceipoc1e77wp0" path="res://assets/images/interface/Coluna_esquerda.png" id="2_katly"]
 [ext_resource type="Texture2D" uid="uid://cag100ngkmivd" path="res://assets/images/siluete 1.png" id="2_wc8wa"]
 [ext_resource type="Texture2D" uid="uid://bjpag5u51h52c" path="res://assets/images/siluete 2.png" id="3_wu6gt"]
 [ext_resource type="Texture2D" uid="uid://5yqmaf6ogool" path="res://assets/images/siluete 3.png" id="4_ejgbc"]
-[ext_resource type="Texture2D" uid="uid://81hr2rkpsmmg" path="res://assets/images/arrow.png" id="5_wc8wa"]
+[ext_resource type="Script" uid="uid://pbrn3ocjvnkn" path="res://data/char_selection.gd" id="4_katly"]
+[ext_resource type="Script" uid="uid://dntfm2b4s0uwf" path="res://data/uiPersonagens.gd" id="4_wc8wa"]
+[ext_resource type="Texture2D" uid="uid://81hr2rkpsmmg" path="res://assets/images/botoes/arrow.png" id="5_wc8wa"]
+[ext_resource type="Texture2D" uid="uid://cuqcnqjxaarth" path="res://assets/images/botoes/Botão_Pronto.png" id="9_queyv"]
+[ext_resource type="Texture2D" uid="uid://dlopm4uo7785u" path="res://assets/images/botoes/Botão_Pronto_Selecionado.png" id="10_q3w2e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_katly"]
 
 [node name="SelecaoPersonagens" type="Node" unique_id=184342449]
 
 [node name="Fundo" type="Node2D" parent="." unique_id=1846065397]
 
+[node name="BackgoundSelecaoRegiaoSemColuna" type="Sprite2D" parent="Fundo" unique_id=1254384372]
+position = Vector2(578.2222, 329)
+scale = Vector2(0.63148147, 0.63148147)
+texture = ExtResource("1_0fvxc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Fundo" unique_id=136527300]
+position = Vector2(578, 1079)
+rotation = 1.5707964
+scale = Vector2(0.65936476, 1.1055217)
+texture = ExtResource("2_katly")
+
+[node name="Wall1" type="Polygon2D" parent="Fundo" unique_id=835889874]
+visible = false
+position = Vector2(9.713575, 21.90159)
+scale = Vector2(0.9875467, 0.9667149)
+color = Color(1, 0.7125, 0.25, 1)
+polygon = PackedVector2Array(-23, 658, -23, -32, 780, -33)
+
+[node name="Wall2" type="Polygon2D" parent="Fundo" unique_id=1498413297]
+visible = false
+position = Vector2(224.70682, -30.251646)
+rotation = 0.00047028522
+scale = Vector2(0.8724689, 0.95986384)
+color = Color(0, 0.43, 0.15050006, 1)
+polygon = PackedVector2Array(576, 18, -277, 715, 1072, 715, 1072, 18)
+
+[node name="Floor1" type="Polygon2D" parent="Fundo" unique_id=1247892452]
+visible = false
+position = Vector2(-0.24357891, -265.58557)
+scale = Vector2(0.98260146, 1.3963964)
+color = Color(0, 0.34533328, 0.37, 1)
+polygon = PackedVector2Array(-14, 448, 1193, 448, 1193, 670, -14, 670)
+
 [node name="Palco" type="Node2D" parent="." unique_id=1861398604]
-script = ExtResource("1_k7kwq")
+script = ExtResource("1_wu6gt")
 
 [node name="Posicoes" type="Node2D" parent="Palco" unique_id=1877406102]
 
@@ -32,6 +72,7 @@ position = Vector2(920, 480)
 
 [node name="Char0" type="Node2D" parent="Palco/NoPersonagens" unique_id=342270675]
 position = Vector2(473, -90)
+script = ExtResource("4_katly")
 
 [node name="SelectionEffect" type="Sprite2D" parent="Palco/NoPersonagens/Char0" unique_id=2063011495]
 
@@ -41,6 +82,18 @@ scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_wc8wa")
 centered = false
 offset = Vector2(-69, -443)
+
+[node name="Button" type="Button" parent="Palco/NoPersonagens/Char0/Sprite2D" unique_id=386073450]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -69.0
+offset_top = -443.0
+offset_right = -69.0
+offset_bottom = -443.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_katly")
 
 [node name="Label" type="Label" parent="Palco/NoPersonagens/Char0" unique_id=1375608902]
 anchors_preset = 8
@@ -55,11 +108,12 @@ offset_bottom = -310.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 0
-text = "Vorcaro"
+text = "Versales"
 horizontal_alignment = 1
 
 [node name="Char1" type="Node2D" parent="Palco/NoPersonagens" unique_id=1421790169]
 position = Vector2(329, -90)
+script = ExtResource("4_katly")
 
 [node name="SelectionEffect" type="Sprite2D" parent="Palco/NoPersonagens/Char1" unique_id=1126172413]
 
@@ -69,6 +123,18 @@ scale = Vector2(0.7, 0.7)
 texture = ExtResource("3_wu6gt")
 centered = false
 offset = Vector2(-84, -437)
+
+[node name="Button" type="Button" parent="Palco/NoPersonagens/Char1/Sprite2D" unique_id=1839391859]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -437.0
+offset_right = -84.0
+offset_bottom = -437.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_katly")
 
 [node name="Label" type="Label" parent="Palco/NoPersonagens/Char1" unique_id=1955180044]
 anchors_preset = 8
@@ -83,11 +149,12 @@ offset_bottom = -310.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 0
-text = "Tomas"
+text = "Laerte"
 horizontal_alignment = 1
 
 [node name="Char2" type="Node2D" parent="Palco/NoPersonagens" unique_id=1102812259]
 position = Vector2(186, -90)
+script = ExtResource("4_katly")
 
 [node name="SelectionEffect" type="Sprite2D" parent="Palco/NoPersonagens/Char2" unique_id=374685285]
 
@@ -97,6 +164,18 @@ scale = Vector2(0.7, 0.7)
 texture = ExtResource("4_ejgbc")
 centered = false
 offset = Vector2(-66, -439)
+
+[node name="Button" type="Button" parent="Palco/NoPersonagens/Char2/Sprite2D" unique_id=840877201]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -66.0
+offset_top = -439.0
+offset_right = -66.0
+offset_bottom = -439.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_katly")
 
 [node name="Label" type="Label" parent="Palco/NoPersonagens/Char2" unique_id=601134359]
 anchors_preset = 8
@@ -116,6 +195,7 @@ horizontal_alignment = 1
 
 [node name="Char3" type="Node2D" parent="Palco/NoPersonagens" unique_id=486558189]
 position = Vector2(73, -90)
+script = ExtResource("4_katly")
 
 [node name="SelectionEffect" type="Sprite2D" parent="Palco/NoPersonagens/Char3" unique_id=745467666]
 
@@ -126,6 +206,18 @@ texture = ExtResource("2_wc8wa")
 centered = false
 offset = Vector2(-109, -438)
 flip_h = true
+
+[node name="Button" type="Button" parent="Palco/NoPersonagens/Char3/Sprite2D" unique_id=1024061330]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -109.0
+offset_top = -438.0
+offset_right = -109.0
+offset_bottom = -438.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_katly")
 
 [node name="Label" type="Label" parent="Palco/NoPersonagens/Char3" unique_id=855028818]
 anchors_preset = 8
@@ -144,6 +236,7 @@ text = "Samuel"
 horizontal_alignment = 1
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=382448057]
+script = ExtResource("4_wc8wa")
 
 [node name="Control" type="Control" parent="UI" unique_id=1783356471]
 layout_mode = 3
@@ -226,8 +319,14 @@ size_flags_horizontal = 8
 size_flags_vertical = 8
 
 [node name="Confirmar" type="TextureButton" parent="UI/Control/Margem/Margem" unique_id=333785675]
-custom_minimum_size = Vector2(150, 150)
+custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
-texture_normal = ExtResource("1_fi10c")
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture_normal = ExtResource("9_queyv")
+texture_pressed = ExtResource("10_q3w2e")
 ignore_texture_size = true
 stretch_mode = 5
+
+[connection signal="pressed" from="Palco/NoPersonagens/Char0/Sprite2D/Button" to="Palco/NoPersonagens/Char0" method="_on_button_pressed"]
+[connection signal="pressed" from="UI/Control/Margem/Margem/Confirmar" to="UI" method="_on_confirmar_pressed"]

@@ -65,3 +65,5 @@ label direcao
 	set {temp} = "1"
 	(você encontrou um pião entalhado)
 	jump direcao
+label timeout
+you died

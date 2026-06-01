@@ -19,7 +19,7 @@
 &"portraits": {
 "chad": {
 "export_overrides": {
-"image": "\"res://assets/images/NPC_elf 2.png\""
+"image": "\"res://assets/images/personagens/NPC_elf 2.png\""
 },
 "mirror": true,
 "offset": Vector2(0, -200),
@@ -28,7 +28,7 @@
 },
 "idle": {
 "export_overrides": {
-"image": "\"res://assets/images/NPC_elf.png\""
+"image": "\"res://assets/images/personagens/NPC_elf.png\""
 },
 "mirror": true,
 "offset": Vector2(0, -200),

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://yndu081pi5we"]
 
-[ext_resource type="Texture2D" uid="uid://cdjotnp430hx" path="res://assets/images/brasil 1.png" id="1_xp5yl"]
+[ext_resource type="Texture2D" uid="uid://cdjotnp430hx" path="res://assets/images/mapa/brasil 1.png" id="1_xp5yl"]
 [ext_resource type="Script" uid="uid://ds8kl0i4m6mf7" path="res://data/regiao.gd" id="2_8dlry"]
 
 [node name="Mapa" type="Node2D" unique_id=1306813973]

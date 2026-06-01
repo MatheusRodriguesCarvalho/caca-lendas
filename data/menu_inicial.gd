@@ -6,3 +6,6 @@ func _on_criar_sessao_pressed() -> void:
 
 func _on_entrar_sessao_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/mapa.tscn")
+
+func _on_lista_de_amigos_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/main.tscn")

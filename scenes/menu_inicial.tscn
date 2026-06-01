@@ -20,38 +20,39 @@ theme_override_constants/margin_bottom = 40
 layout_mode = 2
 texture = ExtResource("2_nn1uv")
 
+[node name="Bottons" type="VBoxContainer" parent="MenuPrincipal" unique_id=920819303]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="criar sessao" type="Button" parent="MenuPrincipal/Bottons" unique_id=791091796]
+layout_mode = 2
+text = "criar sessão"
+script = ExtResource("4_nn1uv")
+
+[node name="entrar sessao" type="Button" parent="MenuPrincipal/Bottons" unique_id=1836075544]
+layout_mode = 2
+text = "Entrar sessão"
+
+[node name="lista de amigos" type="Button" parent="MenuPrincipal/Bottons" unique_id=488975944]
+layout_mode = 2
+text = "Lista de amigos"
+
+[node name="opcoes" type="Button" parent="MenuPrincipal/Bottons" unique_id=1077229139]
+layout_mode = 2
+text = "Opções"
+
+[node name="sair" type="Button" parent="MenuPrincipal/Bottons" unique_id=1351146810]
+layout_mode = 2
+text = "Sair"
+
 [node name="Logo" type="Sprite2D" parent="." unique_id=1158035926]
 position = Vector2(150, 150)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_twj80")
 
-[node name="Bottons" type="VBoxContainer" parent="." unique_id=920819303]
-offset_left = 103.0
-offset_top = 225.0
-offset_right = 440.0
-offset_bottom = 496.0
-alignment = 1
-
-[node name="criar sessao" type="Button" parent="Bottons" unique_id=791091796]
-layout_mode = 2
-text = "criar sessão"
-script = ExtResource("4_nn1uv")
-
-[node name="entrar sessao" type="Button" parent="Bottons" unique_id=1836075544]
-layout_mode = 2
-text = "Entrar sessão"
-
-[node name="lista de amigos" type="Button" parent="Bottons" unique_id=488975944]
-layout_mode = 2
-text = "Lista de amigos"
-
-[node name="opcoes" type="Button" parent="Bottons" unique_id=1077229139]
-layout_mode = 2
-text = "Opções"
-
-[node name="sair" type="Button" parent="Bottons" unique_id=1351146810]
-layout_mode = 2
-text = "Sair"
-
-[connection signal="pressed" from="Bottons/criar sessao" to="." method="_on_criar_sessao_pressed"]
-[connection signal="pressed" from="Bottons/entrar sessao" to="." method="_on_entrar_sessao_pressed"]
+[connection signal="pressed" from="MenuPrincipal/Bottons/criar sessao" to="." method="_on_criar_sessao_pressed"]
+[connection signal="pressed" from="MenuPrincipal/Bottons/entrar sessao" to="." method="_on_entrar_sessao_pressed"]
+[connection signal="pressed" from="MenuPrincipal/Bottons/lista de amigos" to="." method="_on_lista_de_amigos_pressed"]
