@@ -1,3 +1,55 @@
 [background arg="res://assets/backgound/biblioteca.jpg" fade="0.7" wait="true"]
-parece que estou na biblioteca
-"de certo está"
+Após virar à esquerda, caminhei por uns 15 minutos e me deparei com uma grande biblioteca antiga, apesar de parecer velha, estava bem cuidada e decorada. Pude ouvir uma voz cantarolando dentro do local, será que devo entrar ou explorar a região antes?
+- (Olhar a Cisterna)
+	Pelo que me lembro isso se chama cisterna, é onde recolhem a água da chuva para que uma família possa passar o período de estiagem… Uma construção muito importante e crucial que ajudou milhares de pessoas. O que é isso? (Encontrou pião entalhado)
+	Um pião velho? Quanto descuido… Parece ter sido entalhado a mão, mas essas manchas acobreadas com certeza são sangue seco… Vou guardar isso e carregar comigo, talvez alguém saiba mais sobre esse objeto. (Bate na porta da biblioteca e escuta autorização para entrar)
+	set {Itens.Piao_entalhado} = true
+	join Azenuide left
+	Azenuide: Demorou a bater. Pelo barulho dos passos, achei que ia passar horas rodeando a cisterna do finado Antônio…
+	Você… Estava me observando? Isso é um tanto assustador, pensando que há horas estou ouvindo sobre desaparecimentos.
+	Azenuide: "Numa cidade onde as pessoas andam sumindo feito fumaça, como o senhor parece saber bem, a gente aprende a vigiar quem chega, moço. Mas não fique aí na porta espiando, assustado. Aceita uma xícara de café ou um copo d'água do filtro de barro? O sol da Bahia costuma castigar os forasteiros."
+	Muito obrigado, agora que disse, minha garganta está seca. Eu gostaria de algumas respostas, se não for incômodo.
+	Azenuide: “Sei bem ao que o senhor veio. Dona Cleunice deve ter lhe encontrado na encruzilhada e lhe assustou o bastante. Puxe uma cadeira, assim que eu voltar com o café e a água posso trazer alguma resposta, mas é melhor saber já que a história que o povo conta é diferente da que os livros escondem, visse?”
+	set {NPCs.Azenuide.Empatica} = true
+	leave Azenuide
+- (Bater na porta)
+	Acho que é melhor realizar o contato logo, quanto antes conseguir informações, mais rápido descubro o que está atacando o povo.
+	join Azenuide center
+	Azenuide: Tá aberta. Pode entrar
+	(Abro a porta sem muito esforço e me surpreendo com o quão silenciosa ela é. Olho ao redor e então cumprimento a jovem com um sorriso.) Boa tarde, peço desculpas por interromper seu trabalho. Me aconselharam a procurar por Azenuide.
+	Azenuide: "Pois achou. Não costumo sorriso pra vento, moço, então não repare a cara fechada. Sente-se, por favor. O senhor aceita água ou café passado? Tenho uma garrafa que acabei de coar."
+	Oh, eu adoraria. Muito obrigado. A hospitalidade do seu povo é natural e acolhedora, pelo que percebo. Mesmo durante esse clima tão tenso…
+	Azenuide: (Ela me serve uma xícara com café quentinho e um copo de água fresca, sorrio em agradecimento) "Nós, baianos do interior, sabemos receber bem quem tem bons modos. Como o senhor fala de um clima tenso, imagino que seja sobre o que ronda as bordas da cidade… Este não bate na porta e muito menos bebe café…"
+	Azenuide: " Em que os arquivos de Umburanas podem servir ao moço? Procura por um livro específico? Veio apenas prosear?"
+	leave Azenuide
+- (Abrir a porta)
+	join Azenuide left
+	Azenuide: Sua mãe não te deu educação? Bater antes de entrar é o mínimo esperado”
+	set {NPCs.Azenuide.Hostil} = true
+	“Pelo visto não foi educado da minha parte… É inacreditável o quão hostil ela está…” Peço desculpas pela minha invasão, não achei que seria tão indelicado assim apenas entrar. Vim fazer uma investigação.
+	Azenuide: “Intrometido do jeito que é, dá para perceber que gosta de ir além da sua conta. Diga o livro que quer e nada mais.”
+	“O olhar dela intimida um pouco… Com certeza a hospitalidade não mora nesse semblante fechado.” Não procuro por qualquer livro, sou jornalista. Preciso dos registros sobre os desaparecimentos, algo que explique as lendas dessa região.
+	Azenuide: (Ouço ela suspirar com pesar e ao cruzar os braços como se estivesse se controlando para não me tirar dali, respondeu algumas dúvidas) “Folclore fica na estante encostada na parede, ao final do primeiro corredor."
+	Azenuide: "Já vou avisando, forasteiro, se veio procurar a solução escondida em algum papel, achando que isso explica o que acontece lá fora nas matas, está perdendo seu tempo e insultando a inteligência da minha comunidade."
+	Azenuide: "A história é fluida e viva, a verdade habita outros lugares. O povo pode culpar a criatura de boca grandes nas costas, chamando-o de covarde, apenas pra esconder a maldade que homens de terno e chapéu de couro fizeram no passado."
+	leave Azenuide
+if {NPCs.Azenuide.Empatica} == true:
+	“Escuto os passos de Azenuide, algumas portas são abertas e o cheiro de café foi revelado assim que ela abriu a porta do que parecia ser uma cozinha. Observando ao redor, consigo notar que a biblioteca é bem cuidada, deve ser um lugar bem precioso para a jovem… Vejo a porta se fechando e Azenuide avisa seu retorno”
+	(Mostro o Pião quando Azenuide me serve uma xícara com café e um copo d'água) Encontrei isso um pouco enterrado, próximo a cisterna… Sei que é um pião de madeira, parece entalhado, feito a mão… Mas essas manchas velhas são sangue seco, não é?
+	join Azenuide right
+	Azenuide: “Guarde isso, moço… Esconda bem fundo no bolso e não deixe que os coronéis que rondam hoje vejam. Isso não é um brinquedo que foi jogado fora. É memória de um povo que tentaram apagar."
+	(Acabo observando o pião com certa angústia. O que ela queria dizer com memória de um povo que tentaram apagar?) Memória de quem…? De que povo você diz?
+	Azenuide: “Daquilo que vocês chamam de monstro. O Quibungo. Os livros pintam apenas uma criatura covarde de boca nas costas. Mas... Ele um dia foi somente um cachorro, um guardião dos escravizados daqui. Lá na África Quibungo significa lobo. E lobo significa lealdade. Uma vez a maldade de um capataz passou do limite… E o guardião rancou a mão do infeliz para proteger um inocente.”
+	(Meu peito doía, era óbvio como aquela história terminava, mas precisei perguntar) E o que aconteceu com o cachorro…?
+	Azenuide: (Os olhos dela subiram para o teto e então continuou) “A vida dele foi ceifada. Cortaram-no sem piedade alguma. O sangue dele banhou a terra, e a terra devolveu a fúria. A fúria é eterna, vira lenda. E as lendas são mudadas de acordo com a vontade de quem as conta. O sol está começando a ir, moço. Se quiser ver o amanhã, vá embora."
+	leave Azenuide
+elif {NPCs.Azenuide.Hostil} == true:
+	(Pego um livro de folclore nordestino e penso um pouco.) "Boca nas costas... Covarde... Quibungo? É sério isso? Que medo esse demônio representa para ter assumido logo essa forma?"
+	(Começo a ler o resumo da lenda.) "Extremamente voraz e feio, dizem que não possui grande inteligência ou esperteza. Também é muito vulnerável e pode ser morto facilmente a tiro, facada, paulada ou qualquer outra arma. Covarde e medroso, morre gritando, apavorado, de forma quase inocente."
+	"Tem a cabeça enorme e um grande buraco no meio das costas, que se abre e fecha conforme ele abaixe e levante a cabeça. Come pessoas, especialmente crianças e mulheres, abrindo o buraco e atirando-as dentro dele."
+	"É... Não há nada de diferente do que já sabia. Que perda de tempo..." (Devolvo o livro exatamente onde peguei e saio antes que Azenuide fique mais nervosa.)
+	join Azenuide left
+	Azenuide: "Apesar da má educação. Evite a mata. Não invente de causar problemas para meu povo, ou o Quibungo não será a única coisa a temer, moço."
+	leave Azenuide
+(Saio da biblioteca e começo a caminhar em frente, me pergunto o que há pelo caminho. Talvez... Mesmo com os avisos, preciso ir pra mata.)
+jump encontro/

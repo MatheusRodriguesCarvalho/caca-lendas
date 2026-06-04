@@ -1,4 +1,56 @@
 [background arg="res://assets/backgound/ccomunitario.jpg" fade="0.7" wait="true"]
-perace que esse é o centro comunitario
-"alto lá, quem vem ao centro?"
-[signal arg="menu_inicial"]
+“Após uma caminhada de uns 10 minutos cheguei ao centro comunitário, ele era bem singelo, poucas casas ao redor do que parecia ser um hotel antigo. Apesar de emanar uma aura velha, conseguia sentir o cuidado que os cidadãos possuíam por ele, além do cheiro de algo cozinhando… Talvez feijoada? Me aproximei receoso e não precisei bater na porta, uma moça jovem me recebeu”
+join Sirlene left
+Sirlene: “Olha só, um forasteiro. O que faz por essas bandas? Estar perdido no interior da Bahia não é pra qualquer um.”
+leave Sirlene
+- (Falar da feijoada)
+	"O cheiro da feijoada está exalando por todo o caminho, acabei sendo atraído para cá. Está aberto?"
+	join Sirlene left
+	“Você é um escarreirado. Se achegue e sente, meus quitutes são os melhores e você não vai se arrepender. Caso vá ficar aqui na hospedagem, o almoço e janta são por nossa conta, visse?”
+	set {comida} = true
+	Escarreirado? É algum tipo de ofensa? Não pretendo me esticar na estadia, seria incômodo e estou apenas de passagem.
+	Sirlene:  “Moço do asfalto, a pressa corre em suas veias. Se aquiete e coma, deixe os problemas descansarem e então você os resolve depois. Vou servir um prato de feijoada e alguns acarajés, prefere quente ou frio?”
+	Quente. Comida fria não é gostosa.
+	leave Sirlene
+- (Falar da profissão)
+	Vim investigar os desaparecimentos, sou jornalista.
+	join Sirlene center
+	Sirlene:  “Vocês nunca aprendem. Povo de jornal é abestalhado demais. Ofereço hospitalidade a qualquer um, mas aqui não te deixarei entrar. Diga o que quer e arribe daqui.”
+	Não vim incomodar, apenas sigo ordens para colocar comida no meu prato e roupas em meu corpo. Os jornais falam sobre os desaparecimentos com enorme temor. Sabe algo?
+	Sirlene: “Sei que eles acontecem desde antes do meu nascimento. Levaram minha irmã e estou aqui esperando por ela desde que me entendo por gente. Antigamente os cangaceiros lidavam com certos… Bichos. Mas quem os conhece sabe bem, o poder mexe com a cabeça de qualquer um, vingança motivava muitos deles.”
+	Certos bichos? Sinto muito que a tenha perdido, é uma dor que ninguém deveria conhecer. Pode me falar mais sobre os cangaceiros?
+	Sirlene: “...Não posso. O moço é agreste e eu não quero me lembrar do passado. Segue teu rumo, até o fim da vida nessa esquina há uma família antiga, os elementos daquela casa indicam para mantermos distância. O moço do asfalto consegue lidar com isso.”
+	leave Sirlene
+- (Falar que está de passagem)
+	 Estou de passagem pelo nordeste e escolhi dar uma parada em Umburanas, alguns dos meus entes queridos moraram por aqui antes de irem para São Paulo.
+	join Sirlene center
+	Sirlene: “Reconheço um menino do asfalto assim que pisam aqui. Se achegue, nosso povo adora forasteiros, desde que sejam simpáticos e agradecidos. Te convido a comer dos melhores quitutes da região e pousar por uns dias.”
+	set {comida} = true
+	Ah, agradeço muito pela hospitalidade. Mas é apenas uma rápida visita, preciso seguir viagem em breve.
+	Sirlene: “Povo da cidade grande é sempre assim, apressado e agitado. Um repouso num machuca, não moço. Vamos, aquiete e sente. Vou buscar um pouco da minha feijoada, é hora de almoça mesmo.”
+	leave Sirlene
+	Acho que não vou conseguir te convencer do contrário. Vou ficar um pouco, mas preciso realmente continuar com a viagem ou ficarei para trás. Podemos conversar um pouco enquanto como?
+	(Apenas escuto um grito de “Oxê! Isso é chover no molhado”, acredito que signifique “óbvio”.) "Tenho muito que aprender com esse povo…"
+if {comida} == true:
+	"O cheiro da feijoada me atingiu com intensidade e frescor, perfumava o ambiente com força. Agora sim, dava para acreditar que Sirlene era a maior quituteira de Umburanas, embora até então a quantidade de pessoas me fizesse questionar se haveria muitas outras para disputar pelo pódio."
+	join Sirlene center
+	Sirlene: “Moço do asfalto, suncê bebe aluá? Se nunca provou, vai ser hoje que o senhor vai querer ficar pra sempre. Três acarajés bem quentes e uma feijoada gorda saindo no capricho”
+	 A lua? Nunca experimentei beber a lua, não. Que gosto tem? Ela é doce ou azeda?
+	Sirlene: “É aluá, não a lua, abestalhado. É guaraná de abacaxi e milho, num tem nada assim lá na cidade?”
+	Não, nunca ouvi falar. Guaraná geralmente é de guaraná, não? Milho com abacaxi é novidade para mim.
+	Sirlene: “Adoçamos com rapadura e a molecada adora. Agora vá, sente e coma. Experimente aluá e então podemos prosear, você disse que quer saber mais sobre a cultura, não sou Azenuide, mas até que sou sabida de algumas coisinhas.”
+	(Mordo um pedaço do acarajé e entendo que quente ou frio apenas representavam a quantidade de pimenta, pois o bolinho estava morno e seu ardor era descomunal. Tomei um longo gole de aluá, aliviando a picância em alguns segundos.)
+	 Uau, a pimenta é potente por aqui né? Achei que quente ou frio significasse a temperatura, não a ardência. Mas esse aluá é bem bom, obrigado pela comida. Gostaria de conversar um pouco sobre os desaparecimentos recentes. Foi inevitável ouvir o rádio do ônibus falando sobre isso por uns bons minutos.
+	Sirlene: “Esses cabras do ônibus adoram ouvir o rádio e depois falam que nós somos medrosos. Não sei muito sobre os desaparecimentos, só sei que acontecem há tantos anos que já deixamos de ter medo. Sabemos o que fazer. Evitar a mata a noite e não andar sozinhos."
+	Não sabem o que causa esses desaparecimentos há tantos anos? Talvez… Um grupo criminoso?
+	Sirlene: "Há uma história, bem antiga, meu bisavô quem me contava. Uma criatura, meio homem, meio lobo. Os escravos livres diziam que ele era sinal de resiliência e cuidado, os capatazes diziam que era um velho covarde e medroso. Não sei ao certo a aparência dessa criatura, apenas sei que é bem ambígua sua origem."
+	leave Sirlene
+else:
+	(Agradeço a Sirlene e começo a caminhar. Poucos metros à frente do hotel encontrei um chapéu de cangaceiro. Ignorei meus receios e continuei andando. Acho que caminhei por uns 20 minutos e minhas pernas me perguntaram se eu estava no lugar certo. A borda da mata da caatinga, como é possível uma área tão verde e árida?)
+	- (Olhar na direção da mata adentro)
+		É uma mata densa… Vai contra o que aprendi da Caatinga, mas quem sou eu para questionar?
+	- (Se aproximar de uma árvore sinuosa)
+		 Isso é uma presa? Que criatura poderia ter deixado isso aqui?
+	- (Resmungar olhando o horizonte)
+		Como é possível que tenha tanta vegetação nesse clima árido? Entrar na mata sem conhecê-la pode matar qualquer um…
+	jump encontro/

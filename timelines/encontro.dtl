@@ -1,0 +1,58 @@
+[background arg="res://assets/backgound/hills.jpg" fade="0.0"]
+(Sou pego desprevenido enquanto observo a região, pude ouvir um estrondo na distância, mata adentro e por trás da colina.) “Isso não soou bem, é atípico para a região. Não foi um som natural.”
+- (Investigar)
+	(Me aproximo lentamente da borda da mata, apesar dos avisos. É minha função proteger essas pessoas e garantir o sucesso para minha equipe. Escuto o som de papel e vejo uma carta, assim que a pego começo a ler)
+	set {Itens.Carta_de_lamento} = true
+	“Nosso pobre “lobo” foi levado pelos capatazes após um deles perder uma das mãos que usavam para nos ferir e afugentá-lo… Desde então, aqueles oficiais espalham que o Quibungo era um velho medroso que foi abandonado… Vamos perpetuar a lenda que os paralisam só de lembrar.”
+	Quibungo… Demônio do abandono… Os homens mais velhos temem serem abandonados e se tornarem um Quibungo… Ainda bem que essa cidade é pequena, abandonos não devem ser frequentes…
+	“Posso ouvir o vento sibilando e o som de galhos quebrando ecoam cada vez mais alto, algo bem grande se aproxima… Devo correr ou enfrentá-lo aqui? Como posso ganhar dele?”
+	“Vou correr pra longe da cidade e enfrentá-lo. É minha missão, afinal.” (Começo a correr seguindo a borda da mata, em direção oposta à cidade)
+- (Retornar para a cidade)
+	“Ainda não sei como derrotar esse demônio… Talvez seja arriscado, mas posso procurar por ajuda. Não posso falhar agora e deixar minha equipe lidar com esse erro…”
+	(Começo a correr em direção a cidade, indo para longe da mata. Tento juntar os pontos que consegui investigar, preciso armar um plano rápido.)
+	“Posso diminuir a força dele ao contar uma história modificada. Mas precisam acreditar em mim e não acho que tenho esse tempo, esperar ele enfraquecer para só então enfrentá-lo…”
+- (Mandar uma mensagem para a ONF)
+	(Mando uma mensagem rápida para o restante da equipe.) “É um risco, mas ao menos se alguém precisar assumir meu lugar não vai ficar tão desnorteado e perdido.”
+	“Os sons estão cada vez mais alto, talvez perder tempo escrevendo foi a pior decisão que tomei. Tenho certeza que o demônio se aproximou e não faço ideia de como posso vencê-lo. Vou pensar nisso enquanto corro para longe da cidade, aquela encruzilhada não tinha nenhuma casa por perto.”
+	(Começo a correr em direção à primeira encruzilhada que passei.) “Pensa, pensa… Devo matar o demônio ou há como eliminar sua origem? Por que é tão complicado? Matar ou salvar?”
+(Continuo correndo o mais rápido que consigo.) “Preciso aproveitar que consegui algum tempo em vantagem e criar um plano. Minhas opções são escassas… Matá-lo com meu demônio familiar, tentar enfraquecer sua história ou testar conversar para mudar sua essência…”
+if {Itens.Carta_de_lamento} == true:
+	(Me afasto mais para usar meu poder demoníaco. Invoco rapidamente e com maestria meu demônio. Leviathan representa o medo do mar e é até irônico estar no sertão. Fico feliz por precisar somente quebrar uma concha de forma que um pouco de sangue seja derramado sobre os pedaços)
+	join Leviathan right
+	Leviathan:  “Você é incapaz de resolver esse problema da terra árida sem me convocar? É patético ter que lutar nesse calor.”
+	Não quero que você lute, quero que você me empreste sua habilidade de fala demoníaca e me ajude a conversar com o Quibungo.
+	Leviathan: “Um Quibungo? Por que fala como se eu soubesse o que raios é um Qui… Ah, é isso... Bem, não acho que ele irá te ouvir, mas você pode tentar."
+	(Sinto minha língua queimando e então consigo entender os uivos, o Quibungo chora e lamenta. Como era um corpo morto, o demônio do abandono o roubou para si. Isso significa que não há como ele sair, a menos que seja morto...)
+	Leviathan: "Agora que entendeu a situação, posso agir? Animais possuem uma cognição menos complexa que humanos e por isso virou essa fera."
+	Pode... Assim que terminar vou levar essa carta à cidade e contar a verdade.
+	Leviathan: "Vou ser rápido. Talvez não seja indolor..." (Leviathan invoca um tridente longo, acredito que seja para perfurar o coração com facilidade e drenar todo o sangue. Dito e feito. Em poucos segundos, meu demônio conseguiu lidar com o Quibungo)
+	leave Leviathan
+	Muito obrigado, mais uma vez. Agora... É a vez do humano trabalhar. (Dispenso Leviathan e retorno para a cidade com a carta, explico aos moradores que o Quibungo na verdade era um cachorro e não precisavam temê-lo. Agradeço pela atenção e retorno para a ONF)
+else:
+	- (Me afastar mais e usar meu poder demoníaco.)
+		(Invoco rapidamente e com maestria meu demônio, Leviathan representa o medo do mar e é até irônico estar no sertão. Fico feliz por precisar somente quebrar uma concha de forma que um pouco de sangue seja derramado sobre os pedaços)
+		join Leviathan center
+		Leviathan: “Você é incapaz de resolver esse problema da terra árida sem me convocar? É patético ter que lutar nesse calor.”
+		Reclama menos e me ajuda. Um tridente, uma lança, um temporal, qualquer coisa que massacre um Quibungo seria ótimo agora.
+		Leviathan:  “Um Quibungo? Por que fala como se eu soubesse o que raios é um Qui… Ah, isso”
+		leave Leviathan
+		join Quibungo center
+		Quibungo: (Ele rosna alto, quase como se fosse um grito gutural. Em profundo lamento)
+		leave Quibungo
+		join Leviathan center
+		Leviathan: “Acho que um tridente basta, é uma fera em sofrimento. A lenda distorcida e abandonada, não por opção. Descanse agora.”
+		(Um tridente é invocado e em movimentos ágeis, Leviathan ataca o Quibungo. Apesar dos rosnados altos, as três bocas ameaçadoras, sua agilidade era prejudicada pelo seu tamanho. Não foi necessário mais do que um golpe para ceifar sua vida novamente.)
+		Leviathan: “Tem certeza que esse era o único? O demônio do medo de abandono, em uma cidade tão pequena e desconhecida pelo resto do país. Que contraditório.”
+		Acha que poderíamos ter resolvido sem matá-lo?  Ou essa foi a melhor escolha?
+		Leviathan: “Sou o demônio do mar, não sou um padre para exorcizar e pelo visto era um infernal... O importante é que concluímos a missão e sua equipe não precisa mais se preocupar com você.”
+		Tem razão… Ainda assim, espero que ele descanse em paz.
+		(Retorno para a ONF com uma sensação de que algo faltou, talvez a solução seja temporária...)
+	- (Volto para a cidade e conto outra história.)
+		“Mesmo achando que o tempo é curto, não custa tentar. Ele não parece estar vindo atrás de mim, ao menos, não por agora…” (Me aproximo do centro da cidade, ouvindo com atenção. Acredito que não estou mais sendo perseguido)
+		(Procuro por algum habitante e fico aliviado ao ver um grupo de pessoas sentadas em uma praça simples.) "Boa noite. Vocês conhecem a história dos desaparecimentos? Pelo que vi e ouvi ela está errada, querem ouvir a versão verdadeira?"
+		(Vejo no olhar deles que não sou bem-vindo e começo a me preocupar. Isso não é bom... Preciso eliminar essa história assustadora. Peço desculpas e vou seguindo a rua de paralelepipedos até chegar em uma rua residencial)
+		(Bato na primeira porta a minha esquerda. Escuto um "vá embora, forasteiro!" bem alto e continuo. De porta em porta, até que uma finalmente se abre.) Finalmente, por favor me ouça. A história dos desaparecimen...
+		join cidadão center
+		cidadão: "Moço. Vá me desculpando, mas arribe daqui. O senhor não é bem-vindo. O melhor que o senhor pode fazer é pegar teu rumo de volta para onde veio."
+		leave cidadão
+		(Peço desculpas e saio antes de deixá-los mais irritados. Não acredito que falhei em eliminar o demônio... Retorno à ONF completamente abalado. Preferia morrer e deixar as coisas menos complicadas para minha equipe...)

@@ -1,14 +1,57 @@
 [gd_scene format=3 uid="uid://2upyisx0wiih"]
 
 [ext_resource type="Script" uid="uid://dlu7frq6i25iv" path="res://data/menu_inicial.gd" id="1_eg8ak"]
-[ext_resource type="Texture2D" uid="uid://c7f884ml70km0" path="res://assets/Menu/rocinha.jpg" id="2_nn1uv"]
-[ext_resource type="Texture2D" uid="uid://s8kx4yfug2vl" path="res://assets/Menu/logo.png" id="3_twj80"]
-[ext_resource type="Script" uid="uid://c5wio02k1hu02" path="res://data/buttons.gd" id="4_nn1uv"]
+[ext_resource type="Texture2D" uid="uid://bs13pk1yiysw4" path="res://assets/Menu/capa 3.jpg" id="2_8n1ie"]
+[ext_resource type="Texture2D" uid="uid://b7i7o005k7gxk" path="res://assets/Menu/Botao_Criar_Sessao_Normal.png" id="4_4oxos"]
+[ext_resource type="Texture2D" uid="uid://by4h8dwdfhpsu" path="res://assets/Menu/Botao_Criar_Sessao_Selecionado.png" id="5_msrqu"]
+[ext_resource type="Texture2D" uid="uid://dtbideqeoev8w" path="res://assets/Menu/Botao_Entrar_Sessao_Normal.png" id="6_v7vil"]
+[ext_resource type="Texture2D" uid="uid://cjqlg0uimbtme" path="res://assets/Menu/Botao_Entrar_Sessao_Selecionado.png" id="7_pcajr"]
+[ext_resource type="Texture2D" uid="uid://eg8kqlxhe3xq" path="res://assets/Menu/Botao_Lista_Amigos_Normal.png" id="8_66vix"]
+[ext_resource type="Texture2D" uid="uid://chupc2i6yhp8j" path="res://assets/Menu/Botao_Lista_Amigos_Selecionado.png" id="9_6ptpp"]
+[ext_resource type="Texture2D" uid="uid://bmt7txsni3qio" path="res://assets/Menu/Botao_Opcoes_Normal.png" id="10_om5h3"]
+[ext_resource type="Texture2D" uid="uid://drh50ay5d0e3w" path="res://assets/Menu/Botao_Opcoes_Selecionado.png" id="11_4eos1"]
+[ext_resource type="Texture2D" uid="uid://yd20i0jk2ew3" path="res://assets/Menu/Botao_Sair_Normal.png" id="12_86mvu"]
+[ext_resource type="Texture2D" uid="uid://dww5wvc5g86qi" path="res://assets/Menu/Botao_Sair_Selecionado.png" id="13_yltfu"]
 
-[node name="Node2D" type="Node2D" unique_id=1530029490]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8n1ie"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4oxos"]
+
+[sub_resource type="FontVariation" id="FontVariation_msrqu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7vil"]
+bg_color = Color(0.44, 0.23796667, 0.022000005, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pcajr"]
+bg_color = Color(0, 0.3103334, 0.49, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_msrqu"]
+bg_color = Color(0.6, 0.6, 0.6, 0.1254902)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66vix"]
+bg_color = Color(0.4392157, 0.23921569, 0.023529412, 1)
+
+[node name="MenuPrincipal" type="Node2D" unique_id=1530029490]
 script = ExtResource("1_eg8ak")
 
-[node name="MenuPrincipal" type="MarginContainer" parent="." unique_id=807994711]
+[node name="UI" type="CanvasLayer" parent="." unique_id=175761468]
+
+[node name="TextureRect" type="TextureRect" parent="UI" unique_id=20661219]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_8n1ie")
+expand_mode = 1
+
+[node name="MenuPrincipal" type="MarginContainer" parent="UI" unique_id=807994711]
 offset_right = 1150.0
 offset_bottom = 640.0
 theme_override_constants/margin_left = 40
@@ -16,43 +59,184 @@ theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 40
 theme_override_constants/margin_bottom = 40
 
-[node name="TextureRect" type="TextureRect" parent="MenuPrincipal" unique_id=20661219]
-layout_mode = 2
-texture = ExtResource("2_nn1uv")
-
-[node name="Bottons" type="VBoxContainer" parent="MenuPrincipal" unique_id=920819303]
+[node name="Botoes" type="VBoxContainer" parent="UI/MenuPrincipal" unique_id=920819303]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 1
 
-[node name="criar sessao" type="Button" parent="MenuPrincipal/Bottons" unique_id=791091796]
+[node name="Criar Sessao" type="TextureButton" parent="UI/MenuPrincipal/Botoes" unique_id=1915228686]
+custom_minimum_size = Vector2(260, 60)
 layout_mode = 2
-text = "criar sessão"
-script = ExtResource("4_nn1uv")
+texture_normal = ExtResource("4_4oxos")
+texture_pressed = ExtResource("5_msrqu")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="entrar sessao" type="Button" parent="MenuPrincipal/Bottons" unique_id=1836075544]
+[node name="Acessar Sessao" type="TextureButton" parent="UI/MenuPrincipal/Botoes" unique_id=297753810]
+custom_minimum_size = Vector2(260, 60)
 layout_mode = 2
-text = "Entrar sessão"
+texture_normal = ExtResource("6_v7vil")
+texture_pressed = ExtResource("7_pcajr")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="lista de amigos" type="Button" parent="MenuPrincipal/Bottons" unique_id=488975944]
+[node name="Lista de Amigos" type="TextureButton" parent="UI/MenuPrincipal/Botoes" unique_id=304129763]
+custom_minimum_size = Vector2(260, 60)
 layout_mode = 2
-text = "Lista de amigos"
+texture_normal = ExtResource("8_66vix")
+texture_pressed = ExtResource("9_6ptpp")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="opcoes" type="Button" parent="MenuPrincipal/Bottons" unique_id=1077229139]
+[node name="Opcoes" type="TextureButton" parent="UI/MenuPrincipal/Botoes" unique_id=266666511]
+custom_minimum_size = Vector2(260, 60)
 layout_mode = 2
+texture_normal = ExtResource("10_om5h3")
+texture_pressed = ExtResource("11_4eos1")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Sair" type="TextureButton" parent="UI/MenuPrincipal/Botoes" unique_id=1795883330]
+custom_minimum_size = Vector2(260, 60)
+layout_mode = 2
+texture_normal = ExtResource("12_86mvu")
+texture_pressed = ExtResource("13_yltfu")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="PainelSala" type="ColorRect" parent="UI" unique_id=1779480959]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7)
+
+[node name="VBox" type="VBoxContainer" parent="UI/PainelSala" unique_id=1535502764]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Titulo" type="Label" parent="UI/PainelSala/VBox" unique_id=1936156178]
+custom_minimum_size = Vector2(300, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_8n1ie")
+theme_override_styles/focus = SubResource("StyleBoxFlat_4oxos")
+text = "Buscador de Salas"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Campo" type="LineEdit" parent="UI/PainelSala/VBox" unique_id=1619264143]
+custom_minimum_size = Vector2(300, 40)
+layout_mode = 2
+placeholder_text = "Digite o nome da sala..."
+
+[node name="Erro" type="Label" parent="UI/PainelSala/VBox" unique_id=487957737]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+
+[node name="Botoes" type="HBoxContainer" parent="UI/PainelSala/VBox" unique_id=21794680]
+layout_mode = 2
+
+[node name="Cancelar" type="Button" parent="UI/PainelSala/VBox/Botoes" unique_id=1981888736]
+custom_minimum_size = Vector2(140, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("FontVariation_msrqu")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_v7vil")
+text = "Cancelar"
+
+[node name="Control" type="Control" parent="UI/PainelSala/VBox/Botoes" unique_id=567214639]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="Entrar" type="Button" parent="UI/PainelSala/VBox/Botoes" unique_id=42332176]
+custom_minimum_size = Vector2(140, 40)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_pcajr")
+text = "Entrar"
+
+[node name="PainelOpcoes" type="ColorRect" parent="UI" unique_id=1396559405]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7)
+
+[node name="VBox" type="VBoxContainer" parent="UI/PainelOpcoes" unique_id=979227378]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -64.5
+offset_right = 4.0
+offset_bottom = 64.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Titulo" type="Label" parent="UI/PainelOpcoes/VBox" unique_id=1510959444]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_msrqu")
 text = "Opções"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="sair" type="Button" parent="MenuPrincipal/Bottons" unique_id=1351146810]
+[node name="LabelMusica" type="Label" parent="UI/PainelOpcoes/VBox" unique_id=734840430]
+custom_minimum_size = Vector2(250, 30)
 layout_mode = 2
-text = "Sair"
+text = "Música"
 
-[node name="Logo" type="Sprite2D" parent="." unique_id=1158035926]
-position = Vector2(150, 150)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("3_twj80")
+[node name="SliderMusica" type="HSlider" parent="UI/PainelOpcoes/VBox" unique_id=549776852]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+value = 50.0
 
-[connection signal="pressed" from="MenuPrincipal/Bottons/criar sessao" to="." method="_on_criar_sessao_pressed"]
-[connection signal="pressed" from="MenuPrincipal/Bottons/entrar sessao" to="." method="_on_entrar_sessao_pressed"]
-[connection signal="pressed" from="MenuPrincipal/Bottons/lista de amigos" to="." method="_on_lista_de_amigos_pressed"]
+[node name="LabelEfeitos" type="Label" parent="UI/PainelOpcoes/VBox" unique_id=675273201]
+custom_minimum_size = Vector2(250, 30)
+layout_mode = 2
+text = "Efeitos Sonoros"
+
+[node name="SliderEfeitos" type="HSlider" parent="UI/PainelOpcoes/VBox" unique_id=782375329]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+value = 50.0
+
+[node name="Fechar" type="Button" parent="UI/PainelOpcoes/VBox" unique_id=1467196542]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_66vix")
+text = "Fechar"
+
+[connection signal="pressed" from="UI/MenuPrincipal/Botoes/Criar Sessao" to="." method="_on_criar_sessao_pressed"]
+[connection signal="pressed" from="UI/MenuPrincipal/Botoes/Acessar Sessao" to="." method="_on_acessar_sessao_pressed"]
+[connection signal="pressed" from="UI/MenuPrincipal/Botoes/Lista de Amigos" to="." method="_on_lista_de_amigos_pressed"]
+[connection signal="pressed" from="UI/MenuPrincipal/Botoes/Opcoes" to="." method="_on_opcoes_pressed"]
+[connection signal="pressed" from="UI/PainelSala/VBox/Botoes/Cancelar" to="." method="_on_cancelar_pressed"]
+[connection signal="pressed" from="UI/PainelSala/VBox/Botoes/Entrar" to="." method="_on_entrar_pressed"]
+[connection signal="value_changed" from="UI/PainelOpcoes/VBox/SliderMusica" to="." method="_on_slider_musica_value_changed"]
+[connection signal="value_changed" from="UI/PainelOpcoes/VBox/SliderEfeitos" to="." method="_on_slider_efeitos_value_changed"]
+[connection signal="pressed" from="UI/PainelOpcoes/VBox/Fechar" to="." method="_on_fechar_opcoes_pressed"]

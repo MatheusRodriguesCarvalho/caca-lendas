@@ -15,23 +15,31 @@ run/main_scene="uid://2upyisx0wiih"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://i6wti8gefoha"
+
 [autoload]
 
 Dialogic="*uid://ds2q0uclmolvu"
+MusicManager="*uid://16locn8wnd8b"
 
 [dialogic]
 
 directories/dch_directory={
 "Azenuide": "res://assets/characters/Azenuide.dch",
 "Cleunice": "res://assets/characters/Cleunice.dch",
-"Sirlene": "res://assets/characters/Sirlene.dch"
+"Leviathan": "res://assets/characters/Leviathan.dch",
+"Quibungo": "res://assets/characters/Quibungo.dch",
+"Sirlene": "res://assets/characters/Sirlene.dch",
+"cidadão": "res://assets/characters/cidadão.dch"
 }
 directories/dtl_directory={
 "cap1_teste": "res://timelines/cap1_teste.dtl",
+"encontro": "res://timelines/encontro.dtl",
 "m1_biblioteca_1": "res://timelines/m1_biblioteca_1.dtl",
 "m1_centrocomunitario_1": "res://timelines/m1_centrocomunitario_1.dtl",
 "m1_encruzilhada_1": "res://timelines/m1_encruzilhada_1.dtl",
-"testerapido": "res://timelines/testerapido.dtl",
 "timeoutEnd": "res://timelines/timeoutEnd.dtl"
 }
 layout/style_directory={}
@@ -45,11 +53,13 @@ variables={
 "NPCs": {
 "Azenuide": {
 "Afinidade": 0,
-"Sentimento": ""
+"Empatica": false,
+"Hostil": false,
+"Sentimento": false
 },
 "Cleunice": {
 "Afinidade": 0,
-"Sentimento": ""
+"Sentimento": false
 },
 "Sirlene": {
 "Afinidade": 0,
@@ -67,6 +77,7 @@ variables={
 "Pista": ""
 }
 },
+"comida": false,
 "conhecimento": "",
 "temp": "0"
 }

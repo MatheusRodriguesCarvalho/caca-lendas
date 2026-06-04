@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://dng6cxfjjqoqf"]
 
-[ext_resource type="Script" uid="uid://bfrahpaixlefb" path="res://data/mapRoot.gd" id="1_atgyb"]
+[ext_resource type="Script" uid="uid://bfrahpaixlefb" path="res://data/mapa_manager.gd" id="1_atgyb"]
 [ext_resource type="Texture2D" uid="uid://cdjotnp430hx" path="res://assets/images/mapa/brasil 1.png" id="2_tfnl5"]
 [ext_resource type="Texture2D" uid="uid://bh37ckc7r3vf0" path="res://assets/images/botoes/BS_Mapa_Norte.png" id="2_xafpf"]
 [ext_resource type="Texture2D" uid="uid://bo7mjg82f8pe8" path="res://assets/images/botoes/BS_Mapa_Nordeste.png" id="3_37p3s"]
-[ext_resource type="Texture2D" uid="uid://vlrxt406qyi0" path="res://assets/images/botoes/botaoRegiao_hover.png" id="4_k7lwh"]
 [ext_resource type="Texture2D" uid="uid://xb8qld60muik" path="res://assets/images/botoes/BS_Mapa_Sudeste.png" id="4_klvsx"]
 [ext_resource type="Texture2D" uid="uid://bbeufol42vdbp" path="res://assets/images/botoes/BS_Mapa_Sul.png" id="5_8hego"]
 [ext_resource type="Texture2D" uid="uid://co0yjxq21l5rn" path="res://assets/images/botoes/BS_Mapa_Centro_Oeste.png" id="6_2o3hw"]
@@ -13,19 +12,23 @@
 [ext_resource type="Texture2D" uid="uid://cvryvtr2bq2u4" path="res://assets/images/botoes/Botão_Norte.png" id="8_xafpf"]
 [ext_resource type="Texture2D" uid="uid://djiqmvdaabv2f" path="res://assets/images/interface/Backgound_Selecao_regiao_semColuna.png" id="9_2o3hw"]
 [ext_resource type="Texture2D" uid="uid://brogfuucshuct" path="res://assets/images/botoes/Botão_Norte_Selecionado.png" id="9_37p3s"]
-[ext_resource type="Script" uid="uid://xq68s8reevmc" path="res://data/chatSystem.gd" id="10_k3j34"]
+[ext_resource type="Texture2D" uid="uid://clmv2c8pskbs7" path="res://assets/images/botoes/Botão_Voltar.png" id="10_j36sj"]
+[ext_resource type="Script" uid="uid://xq68s8reevmc" path="res://data/mapa_chatSystem.gd" id="10_k3j34"]
 [ext_resource type="Texture2D" uid="uid://b7wn6gxysel2f" path="res://assets/images/botoes/Botão_Nordeste.png" id="10_klvsx"]
 [ext_resource type="Texture2D" uid="uid://cr32j6rrav6me" path="res://assets/images/botoes/Botão_Nordeste_Selecionado.png" id="11_8hego"]
+[ext_resource type="Texture2D" uid="uid://bj7eug2ncau32" path="res://assets/images/botoes/Botão_Voltar_Selecionado.png" id="11_sbghg"]
 [ext_resource type="Texture2D" uid="uid://b8huwrucso2dr" path="res://assets/images/botoes/Botão_Centro Oeste.png" id="12_2o3hw"]
 [ext_resource type="Texture2D" uid="uid://d4de2vtnppy3y" path="res://assets/images/botoes/Botão_Centro Oeste_Selecionado.png" id="13_or18i"]
 [ext_resource type="Texture2D" uid="uid://twsq1n33o2jg" path="res://assets/images/botoes/Botão_Sudeste.png" id="14_qa4fu"]
 [ext_resource type="Texture2D" uid="uid://c0h08jho4g83w" path="res://assets/images/botoes/Botão_Sudeste_Selecionado.png" id="15_lse37"]
 [ext_resource type="Texture2D" uid="uid://bhkplxj7swxqm" path="res://assets/images/botoes/Botão_Sul.png" id="16_j36sj"]
+[ext_resource type="Texture2D" uid="uid://61tkccfiixs7" path="res://assets/images/botoes/Botão_Sul_Selecionado.png" id="19_qa4fu"]
 [ext_resource type="Texture2D" uid="uid://cuqcnqjxaarth" path="res://assets/images/botoes/Botão_Pronto.png" id="20_sbghg"]
 [ext_resource type="Texture2D" uid="uid://dlopm4uo7785u" path="res://assets/images/botoes/Botão_Pronto_Selecionado.png" id="21_8lbhi"]
 [ext_resource type="Texture2D" uid="uid://ma0amwlwwi4l" path="res://assets/images/interface/F_Imagem_Missao.png" id="21_or18i"]
 [ext_resource type="Texture2D" uid="uid://c4dusanwdom6x" path="res://assets/images/interface/F_Imagem_Missao - Copia.png" id="25_2o3hw"]
 [ext_resource type="Texture2D" uid="uid://c1vsgba5kl6c1" path="res://assets/images/interface/Coluna_esquerda - Copia.png" id="25_or18i"]
+[ext_resource type="Texture2D" uid="uid://d0j1qs3n4errb" path="res://assets/images/interface/placeholder_eye.png" id="26_qa4fu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qa4fu"]
 texture = ExtResource("9_2o3hw")
@@ -52,11 +55,14 @@ modulate_color = Color(0.3529412, 0.8509804, 1, 0.5294118)
 load_path = "res://.godot/imported/F_Imagem_Missao - Copia.png-b0549393b48c60a805cbee5671e8b6bd.ctex"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_or18i"]
-bg_color = Color(0.88908345, 0.47642398, 0, 1)
+bg_color = Color(0.8901961, 0.4745098, 0, 1)
 corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
+shadow_color = Color(9.433627e-06, 0.62010175, 0.8874436, 0.35686275)
+shadow_size = 10
+shadow_offset = Vector2(5, 5)
 
 [node name="Mapa" type="Node" unique_id=1369454431]
 script = ExtResource("1_atgyb")
@@ -74,6 +80,7 @@ scale = Vector2(0.601389, 0.60138893)
 texture = ExtResource("8_8hego")
 
 [node name="MapaBrasil" type="Node2D" parent="." unique_id=1140073922]
+position = Vector2(56.025, 0)
 
 [node name="Norte" type="Area2D" parent="MapaBrasil" unique_id=1283090225]
 position = Vector2(-5.9604645e-08, 1.1920929e-07)
@@ -184,6 +191,17 @@ layout_mode = 2
 [node name="PainelEsquerdo" type="VBoxContainer" parent="UI/Control/MarginContainer/MainLayout" unique_id=1782748308]
 layout_mode = 2
 
+[node name="Voltar" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo" unique_id=1195549777]
+modulate = Color(0.9465828, 1.0288478, 1.3262677, 1)
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture_normal = ExtResource("10_j36sj")
+texture_pressed = ExtResource("11_sbghg")
+ignore_texture_size = true
+stretch_mode = 5
+
 [node name="Espaco2" type="Control" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo" unique_id=564646054]
 layout_mode = 2
 size_flags_vertical = 3
@@ -192,7 +210,7 @@ size_flags_vertical = 3
 layout_mode = 2
 
 [node name="Norte" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" unique_id=1746606250 groups=["BotoesRegioes"]]
-custom_minimum_size = Vector2(140, 40)
+custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
 size_flags_horizontal = 0
 texture_normal = ExtResource("8_xafpf")
@@ -201,7 +219,7 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Nordeste" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" unique_id=830425869 groups=["BotoesRegioes"]]
-custom_minimum_size = Vector2(140, 40)
+custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
 size_flags_horizontal = 0
 texture_normal = ExtResource("10_klvsx")
@@ -210,7 +228,7 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Centro" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" unique_id=1563900802 groups=["BotoesRegioes"]]
-custom_minimum_size = Vector2(140, 40)
+custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
 size_flags_horizontal = 0
 texture_normal = ExtResource("12_2o3hw")
@@ -219,7 +237,7 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Sudeste" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" unique_id=38290660 groups=["BotoesRegioes"]]
-custom_minimum_size = Vector2(140, 40)
+custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
 size_flags_horizontal = 0
 texture_normal = ExtResource("14_qa4fu")
@@ -228,11 +246,11 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Sul" type="TextureButton" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/BotoesRegiao" unique_id=1816311337 groups=["BotoesRegioes"]]
-custom_minimum_size = Vector2(140, 40)
+custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
 size_flags_horizontal = 0
 texture_normal = ExtResource("16_j36sj")
-texture_pressed = ExtResource("4_k7lwh")
+texture_pressed = ExtResource("19_qa4fu")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -412,13 +430,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -50.0
-offset_top = -50.0
-offset_right = 50.0
-offset_bottom = 50.0
+offset_left = -70.0
+offset_top = -70.0
+offset_right = 70.0
+offset_bottom = 70.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_tfnl5")
+texture = ExtResource("26_qa4fu")
 expand_mode = 4
 stretch_mode = 5
 
@@ -443,9 +461,10 @@ offset_right = 100.0
 offset_bottom = 260.0
 grow_horizontal = 2
 bbcode_enabled = true
-text = "                                                                
-teste
-"
+text = "
+
+
+Selecione uma das opções de região, e. confirme"
 tab_size = 1
 
 [node name="Control" type="Control" parent="UI/Control/MarginContainer/MainLayout/PainelDireito/MarginContainer/VBox" unique_id=964277280]
@@ -491,4 +510,5 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
+[connection signal="pressed" from="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/Voltar" to="." method="_on_voltar_pressed"]
 [connection signal="pressed" from="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/ChatLayout/VBoxContainer/ChatContent/InputArea/SendMessage" to="." method="_on_send_message_pressed"]

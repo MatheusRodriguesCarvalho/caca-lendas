@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ddmon84wldpj3"]
 
-[ext_resource type="Script" uid="uid://1pld6lots0h" path="res://data/sceneScript.gd" id="1_o5qli"]
-[ext_resource type="Script" uid="uid://rprlupibunv3" path="res://scenes/managerPopup.gd" id="2_0wfyh"]
+[ext_resource type="Script" uid="uid://1pld6lots0h" path="res://data/manager_sceneScript.gd" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://rprlupibunv3" path="res://data/manager_popups.gd" id="2_0wfyh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5qli"]
 bg_color = Color(0.88908345, 0.47642398, 0, 1)

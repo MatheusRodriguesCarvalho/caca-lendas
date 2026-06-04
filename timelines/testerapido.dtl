@@ -1,9 +1,0 @@
-join Cleunice (chad) left
-set {Scene.Encruzilhada.Pista} = "fasfasfas"
-[text_input var="NPCs.Cleunice.Sentimento"]
-Cleunice: testestes
-leave --All--
-jump ponto
-testando
-label ponto
-testadoaaaaaaaaa
