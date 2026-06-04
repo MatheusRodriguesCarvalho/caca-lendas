@@ -1,4 +1,5 @@
 [background arg="res://assets/backgound/hills.jpg" fade="0.0"]
+audio music "res://assets/audio/soundtracks/casual_1.mp3" [loop="true"]
 set {conhecimento} = "nulo"
 "Usar um mapa ao invés do GPS é um tanto novo, por que tivemos que usar esses equipamentos velhos?"
 (Meus pensamentos e preocupações estavam tão barulhentos que não notei a presença de uma senhora passando pela encruzilhada, acabei por me assustar ao ouvi-la falar.)

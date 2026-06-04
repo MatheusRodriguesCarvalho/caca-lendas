@@ -511,4 +511,3 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [connection signal="pressed" from="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/Voltar" to="." method="_on_voltar_pressed"]
-[connection signal="pressed" from="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/ChatLayout/VBoxContainer/ChatContent/InputArea/SendMessage" to="." method="_on_send_message_pressed"]

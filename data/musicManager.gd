@@ -25,6 +25,8 @@ func _ready():
 	add_child(sfx_player)
 	
 	get_tree().node_added.connect(_on_node_added)
+	await get_tree().process_frame
+	_conectar_botoes_existentes(get_tree().root)
 
 func tocar(stream: AudioStream, loop: bool = true) -> void:
 	if player.stream == stream and player.playing:
@@ -42,28 +44,31 @@ func tocar(stream: AudioStream, loop: bool = true) -> void:
 	
 	player.play()
 
+func _on_node_added(node: Node) -> void:
+	if node is Button or node is TextureButton:
+		if not node.pressed.is_connected(tocar_sfx_aleatorio):
+			node.pressed.connect(tocar_sfx_aleatorio)
+		if not node.mouse_entered.is_connected(tocar_sfx_hover):
+			node.mouse_entered.connect(tocar_sfx_hover)
+
+#PLAY ANY SOUND
 func tocar_sfx(stream: AudioStream) -> void:
 	sfx_player.stream = stream
 	sfx_player.play()
 
-func _on_node_added(node: Node) -> void:
-	if node is Button:
-		node.pressed.connect(tocar_sfx_aleatorio)
-
 func tocar_sfx_aleatorio() -> void:
 	if sons_clique.is_empty():
 		return
-	var stream = sons_clique[randi() % sons_clique.size()]
-	sfx_player.stream = stream
+	sfx_player.stream = sons_clique[randi() % sons_clique.size()]
 	sfx_player.play()
 
 func tocar_sfx_hover() -> void:
 	if sons_hover.is_empty():
 		return
-	var stream = sons_hover[randi() % sons_hover.size()]
-	sfx_player.stream = stream
+	sfx_player.stream = sons_hover[randi() % sons_hover.size()]
 	sfx_player.play()
 
+#DEFINIÇÃO DE VOLUMES
 func set_volume(db: float) -> void:
 	player.volume_db = db
 
@@ -75,3 +80,13 @@ func set_volume_musica(value: float) -> void:
 
 func set_volume_sfx(value: float) -> void:
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear_to_db(value))
+
+
+func _conectar_botoes_existentes(node: Node) -> void:
+	if node is Button or node is TextureButton:
+		if not node.pressed.is_connected(tocar_sfx_aleatorio):
+			node.pressed.connect(tocar_sfx_aleatorio)
+		if not node.mouse_entered.is_connected(tocar_sfx_hover):
+			node.mouse_entered.connect(tocar_sfx_hover)
+	for filho in node.get_children():
+		_conectar_botoes_existentes(filho)

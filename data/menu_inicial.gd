@@ -3,17 +3,17 @@ extends Node2D
 const SALAS_VALIDAS = ["chainsaw man", "contrato", "vazio", "SalamandraAzul"]
 
 func _ready():
+	MusicManager.set_volume_musica($UI/PainelOpcoes/VBox/SliderMusica.value)
+	MusicManager.set_volume_sfx($UI/PainelOpcoes/VBox/SliderEfeitos.value)
+	
 	MusicManager.parar()
 	var stream = preload("res://assets/audio/soundtracks/figth_1.mp3")
 	MusicManager.tocar(stream)
-	_configurar_botoes()
 
 func _on_criar_sessao_pressed() -> void:
-	MusicManager.tocar_sfx_aleatorio()
 	get_tree().change_scene_to_file("res://scenes/selecao_personagens.tscn")
 
 func _on_acessar_sessao_pressed() -> void:
-	MusicManager.tocar_sfx_aleatorio()
 	$UI/PainelSala.visible = true
 	$UI/PainelSala/VBox/Campo.grab_focus()
 
@@ -36,20 +36,6 @@ func _on_entrar_pressed() -> void:
 
 func _on_cancelar_pressed() -> void:
 	$UI/PainelSala.visible = false
-
-func _configurar_botoes():
-	var botoes = $UI/MenuPrincipal/Botoes.get_children()
-	for btn in botoes:
-		btn.modulate.a = 0.7
-		btn.mouse_entered.connect(func(): 
-			MusicManager.tocar_sfx_hover()
-			var t = create_tween()
-			t.tween_property(btn, "modulate:a", 1.0, 0.15)
-		)
-		btn.mouse_exited.connect(func():
-			var t = create_tween()
-			t.tween_property(btn, "modulate:a", 0.4, 0.25)
-		)
 
 func _on_opcoes_pressed() -> void:
 	$UI/PainelOpcoes.visible = true

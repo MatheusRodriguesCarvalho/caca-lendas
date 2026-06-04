@@ -35,7 +35,6 @@ directories/dch_directory={
 "cidadão": "res://assets/characters/cidadão.dch"
 }
 directories/dtl_directory={
-"cap1_teste": "res://timelines/cap1_teste.dtl",
 "encontro": "res://timelines/encontro.dtl",
 "m1_biblioteca_1": "res://timelines/m1_biblioteca_1.dtl",
 "m1_centrocomunitario_1": "res://timelines/m1_centrocomunitario_1.dtl",

@@ -24,7 +24,7 @@ func _ready() -> void:
 	MusicManager.parar()
 	
 	# INICIO DA TIMELINE
-	Dialogic.start("cap1_teste")
+	Dialogic.start("m1_encruzilhada_1")
 
 #RODA CONSTANTEMENTE
 func _process(delta: float) -> void:
@@ -102,6 +102,11 @@ func _processar_comando(argumento: String) -> void:
 			await get_tree().create_timer(2).timeout
 			get_tree().change_scene_to_file("res://scenes/menu_inicial.tscn")
 		"musicVoid":
+			MusicManager.parar()
+			var stream = preload("res://assets/audio/soundtracks/void.mp3")
+			MusicManager.tocar(stream)
+			print("")
+		"musicChill":
 			MusicManager.parar()
 			var stream = preload("res://assets/audio/soundtracks/void.mp3")
 			MusicManager.tocar(stream)

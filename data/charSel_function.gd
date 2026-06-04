@@ -15,7 +15,7 @@ func _input(event):
 			get_viewport().set_input_as_handled()
 
 func _on_clicked() -> void:
-	print("clicado: ", name)
+	#print("clicado: ", name)
 	get_parent().get_parent().selecionar_personagem(self)
 
 func _on_sprite_input(_viewport, event, _shape_idx):

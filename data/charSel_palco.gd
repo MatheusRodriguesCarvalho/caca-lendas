@@ -39,7 +39,7 @@ func selecionar_personagem(char_node: Node2D) -> void:
 	else:
 		char_node.set_selected(true)
 		personagem_selecionado = char_node
-	print("Selecionado: ", personagem_selecionado.name if personagem_selecionado else "nenhum")
+	#print("Selecionado: ", personagem_selecionado.name if personagem_selecionado else "nenhum")
 
 # Mantidos caso ainda sejam usados em outro lugar
 func destacar_personagem(index: int):

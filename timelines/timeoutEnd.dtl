@@ -1,3 +1,4 @@
+[signal arg="musicVoid"]
 [background arg="res://assets/backgound/eye-ominous 1.png" fade="0.0"]
 Você descumpriu o nosso contrato...
 [background arg="res://assets/backgound/eye-ominous 2.jpg" fade="0.0"]
