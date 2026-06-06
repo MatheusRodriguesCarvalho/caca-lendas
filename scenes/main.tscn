@@ -4,11 +4,13 @@
 [ext_resource type="Script" uid="uid://rprlupibunv3" path="res://data/manager_popups.gd" id="2_0wfyh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5qli"]
-bg_color = Color(0.88908345, 0.47642398, 0, 1)
+bg_color = Color(0.86, 0.49077335, 0.06879999, 1)
 corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
+shadow_color = Color(0.31, 0.78150004, 1, 0.98039216)
+shadow_size = 5
 
 [node name="main" type="Node2D" unique_id=1496020993 node_paths=PackedStringArray("barra_timer")]
 script = ExtResource("1_o5qli")
@@ -42,6 +44,33 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_o5qli")
 
 [node name="Aviso" type="Label" parent="CanvasLayer/PainelAviso" unique_id=1185912038]
 custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0.26666668, 1)
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="PainelFinal" type="PanelContainer" parent="CanvasLayer" unique_id=887972979]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -150.0
+offset_right = 250.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_o5qli")
+
+[node name="Final" type="Label" parent="CanvasLayer/PainelFinal" unique_id=1172159323]
+custom_minimum_size = Vector2(450, 250)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0.26666668, 1)

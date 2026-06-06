@@ -4,8 +4,10 @@ var nomes_bots = ["ChurrascoMaster", "Surfista", "BaianoGaucho", "Polem"]
 
 @onready var timer_popup = $"../Timer"
 @onready var popup_entrada = $PainelAviso
+@onready var painel_final = $PainelFinal
 
 func _ready():
+	painel_final.visible = false
 	timer_popup.timeout.connect(_on_timer_popup_timeout)
 	iniciar_espera_aleatoria()
 

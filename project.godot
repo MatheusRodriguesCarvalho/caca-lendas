@@ -78,6 +78,7 @@ variables={
 },
 "comida": false,
 "conhecimento": "",
+"final": "0",
 "temp": "0"
 }
 layout/style_list=[]

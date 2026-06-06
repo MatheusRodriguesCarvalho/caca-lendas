@@ -28,11 +28,11 @@
 },
 "idle": {
 "export_overrides": {
-"image": "\"res://assets/images/personagens/NPC_elf.png\""
+"image": "\"res://assets/images/personagens/c_cleunice.png\""
 },
 "mirror": true,
 "offset": Vector2(0, -200),
-"scale": 0.5,
+"scale": 0.6,
 "scene": ""
 }
 },

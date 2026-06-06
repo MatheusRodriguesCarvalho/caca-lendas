@@ -68,6 +68,12 @@ func tocar_sfx_hover() -> void:
 	sfx_player.stream = sons_hover[randi() % sons_hover.size()]
 	sfx_player.play()
 
+func tocar_sfx_iten() -> void:
+	var stream  = preload("res://assets/audio/soundEffects/item_encontrado.mp3")
+	sfx_player.stream = stream
+	sfx_player.play()
+
+
 #DEFINIÇÃO DE VOLUMES
 func set_volume(db: float) -> void:
 	player.volume_db = db

@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var barra_timer: ProgressBar
+@onready var painel_final = $CanvasLayer/PainelFinal
 
 var nomes_bots = ["ChurrascoMaster", "Surfista", "BaianoGaucho", "Polem"]
 var fluxo_popup: float = 0.0
@@ -101,6 +102,8 @@ func _processar_comando(argumento: String) -> void:
 			#get_tree().change_scene_to_file("res://cenas/creditos.tscn")
 			await get_tree().create_timer(2).timeout
 			get_tree().change_scene_to_file("res://scenes/menu_inicial.tscn")
+		"itenColetado":
+			MusicManager.tocar_sfx_iten()
 		"musicVoid":
 			MusicManager.parar()
 			var stream = preload("res://assets/audio/soundtracks/void.mp3")
@@ -111,3 +114,21 @@ func _processar_comando(argumento: String) -> void:
 			var stream = preload("res://assets/audio/soundtracks/void.mp3")
 			MusicManager.tocar(stream)
 			print("")
+		"finalBom":
+			painel_final.visible = true
+			painel_final.get_node("Final").text = "Final Bom"
+			await get_tree().create_timer(7).timeout
+			
+			get_tree().change_scene_to_file("res://scenes/mapa.tscn")
+		"finalNeutro":
+			painel_final.visible = true
+			painel_final.get_node("Final").text = "Final Neutro"
+			await get_tree().create_timer(7).timeout
+			
+			get_tree().change_scene_to_file("res://scenes/mapa.tscn")
+		"finalRuim":
+			painel_final.visible = true
+			painel_final.get_node("Final").text = "Final Ruim"
+			await get_tree().create_timer(7).timeout
+			
+			get_tree().change_scene_to_file("res://scenes/menu_inicial.tscn")

@@ -299,14 +299,6 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_j36sj")
 theme_override_styles/background = SubResource("StyleBoxEmpty_sbghg")
 theme_override_styles/fill = SubResource("StyleBoxEmpty_8lbhi")
 bbcode_enabled = true
-text = "teste: teste
-teste: teste
-teste: teste
-teste: teste
-teste: teste
-teste: teste
-teste: teste
-teste: teste"
 scroll_following = true
 
 [node name="InputArea" type="HBoxContainer" parent="UI/Control/MarginContainer/MainLayout/PainelEsquerdo/ChatLayout/VBoxContainer/ChatContent" unique_id=1740955716]

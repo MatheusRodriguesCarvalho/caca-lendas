@@ -1,15 +1,15 @@
-[background arg="res://assets/backgound/hills.jpg" fade="0.0"]
-audio music "res://assets/audio/soundtracks/casual_1.mp3" [loop="true"]
+[background arg="res://assets/backgound/bg_agreste.png" fade="0.0"]
+audio music "res://assets/audio/soundtracks/forro_melancolico.mp3" [volume="-5.0" loop="true"]
 set {conhecimento} = "nulo"
 "Usar um mapa ao invés do GPS é um tanto novo, por que tivemos que usar esses equipamentos velhos?"
 (Meus pensamentos e preocupações estavam tão barulhentos que não notei a presença de uma senhora passando pela encruzilhada, acabei por me assustar ao ouvi-la falar.)
-join Cleunice (idle) left [animation="Fade In"]
+join Cleunice (idle) right [animation="Fade In"]
 set {NPCs.Cleunice.Sentimento} = false
 Cleunice (idle): “Ô moço! O senhor não é das bandas de cá, não, né? Um rosto diferente assim, a gente bate o olho e já sabe.”
 [wait time="1.5"]
 leave --All--
 - Isso mesmo, minha senhora, eu vim a trabalho.
-	join Cleunice center
+	join Cleunice right
 	Cleunice (idle): “Trabalho? Com todo respeito fio, mas se suncê pisou no asfalto a vida toda, num tem muito o que caçar por aqui não.”
 	Ah. Não é isso, minha senhora, eu vim aqui para investigar sobre os desaparecimentos recentes. Sou jornalista.
 	Cleunice (chad): “Eu te dei o aviso, fio. Se suncê quiser dar murro em ponta de faca, vá descendo a encruzilhada até dar no centro. Mas vou logo avisando, Umburanas não é terra pra quem fala demais. Vigie sua língua quando chegar lá.”
@@ -17,11 +17,12 @@ leave --All--
 	set {conhecimento} = "nulo"
 	leave Cleunice
 - Estou de passagem
-	join Cleunice center
+	join Cleunice (idle) right
 	Eu vim em uma viagem histórica pelo interior da Bahia, e quis dar uma parada para relaxar um pouco.
 	Cleunice (idle): “Ah, pois se ajeite e vá provar a feijoada de Dona Sirlene, não tem igual nesse sertão! Ela bate ponto lá no hotel do centro comunitário.”
 	Pode deixar, minha senhora, farei questão. Conhece alguma pessoa bem sabida para me contar sobre a história da região? O guia partiu mais cedo por imprevistos…
-	Cleunice (idle): “Olhe, um conselho de velha, não saia espalhando muito da sua vida não. O povo daqui é bicho sentimental, se apega ligeiro aos de fora. Dá até uma tristeza danada quando chega a hora de arribar… Até porque, quem vai embora, não volta nunca mais. Se suncê quiser prosear, procure por Azenuide lá pro centro, todo mundo conhece a bichinha.”
+	Cleunice (idle): “Olhe, um conselho de velha, não saia espalhando muito da sua vida não. O povo daqui é bicho sentimental, se apega ligeiro aos de fora. Dá até uma tristeza danada quando chega a hora de arribar…"
+	Cleunice (idle): "Até porque, quem vai embora, não volta nunca mais. Se suncê quiser prosear, procure por Azenuide lá pro centro, todo mundo conhece a bichinha.”
 - Vim ver um conhecido, um familiar meu.
 	join Cleunice center
 	Cleunice (idle): “Oxe, que coisa boa! Aposto que o senhor vai se agradar demais de posar por estas bandas, nosso carpinteiro faz umas cama que é um capricho só, visse?”
@@ -42,7 +43,7 @@ if {NPCs.Cleunice.Sentimento} != true:
 	else:
 		leave --All--
 [wait time="1.0" hide_text="false"]
-[background arg="res://assets/backgound/crossroad.jpg" fade="0.0"]
+[background arg="res://assets/backgound/bg_encruzilhada.png" fade="0.0"]
 "Esse encontro não foi muito útil, mas também não posso dizer que fora inútil. Deveria visitar o centro comunitário ou o centro da cidade? Procurar por fatos em livros ou conversar com a população?"
 label direcao
 - Seguir à direita
